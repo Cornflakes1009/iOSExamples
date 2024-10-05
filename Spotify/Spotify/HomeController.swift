@@ -11,6 +11,7 @@ class HomeController: UIViewController {
     let menuBar = MenuBar()
     let playlistCellId = "playlistId"
     let colors: [UIColor] = [.systemRed, .systemBlue, .systemTeal]
+    let music = [playlists, artists, albums]
     
     lazy var collectionView: UICollectionView = {
        let layout = UICollectionViewFlowLayout()
@@ -30,6 +31,7 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view?.backgroundColor = .spotifyBlack
+        menuBar.delegate = self
         
         layout()
     }
@@ -55,16 +57,37 @@ class HomeController: UIViewController {
 
 extension HomeController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        colors.count
+        music.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: playlistCellId, for: indexPath) as! PlaylistCell
         cell.backgroundColor = colors[indexPath.item]
+        cell.tracks = music[indexPath.item]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: collectionView.frame.height)
     }
+    
+    // can't have scrollViewWillEndDragging and scrollViewDidScroll at the same time. Not if you want to use the scroll indicator (green bar under the menu items)
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//        let index = targetContentOffset.pointee.x / view.frame.width
+//        menuBar.selectItem(at: Int(index))
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        menuBar.scrollIndicator(to: scrollView.contentOffset)
+    }
+}
+
+extension HomeController: MenuBarDelegate {
+    func didSelectItemAt(index: Int) {
+        let indexPath = IndexPath(item: index, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: [], animated: true)
+    }
+    
+    
 }

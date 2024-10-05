@@ -32,7 +32,7 @@ class TitleBarController: UIViewController {
     var podcastBarButtonItem: UIBarButtonItem!
     
     let container = Container()
-    let viewControllers: [UIViewController] = [MusicViewController(), PodcastViewController()]
+    let viewControllers: [UIViewController] = [HomeController(), HomeController()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
