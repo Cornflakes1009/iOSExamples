@@ -235,7 +235,7 @@ extension MenuBar {
         
         indicatorTrailing?.constant = yTrailing
         
-        print("\(index) percentScrolled = \(percentScrolled)")
+        //print("\(index) percentScrolled = \(percentScrolled)")
         
     }
 }

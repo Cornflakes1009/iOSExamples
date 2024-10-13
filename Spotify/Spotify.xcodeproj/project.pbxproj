@@ -25,6 +25,18 @@
 		D9DB7DB72CAD210600ABF9B6 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DB62CAD210600ABF9B6 /* Data.swift */; };
 		D9DB7DB82CAD210600ABF9B6 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DB62CAD210600ABF9B6 /* Data.swift */; };
 		D9DB7DB92CAD210600ABF9B6 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DB62CAD210600ABF9B6 /* Data.swift */; };
+		D9DB7DBB2CB3AB5E00ABF9B6 /* ProjectTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DBA2CB3AB5E00ABF9B6 /* ProjectTwoController.swift */; };
+		D9DB7DBC2CB3AB5E00ABF9B6 /* ProjectTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DBA2CB3AB5E00ABF9B6 /* ProjectTwoController.swift */; };
+		D9DB7DBD2CB3AB5E00ABF9B6 /* ProjectTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DBA2CB3AB5E00ABF9B6 /* ProjectTwoController.swift */; };
+		D9DB7DBF2CB4F4EB00ABF9B6 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DBE2CB4F4EB00ABF9B6 /* TrackCell.swift */; };
+		D9DB7DC02CB4F4EB00ABF9B6 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DBE2CB4F4EB00ABF9B6 /* TrackCell.swift */; };
+		D9DB7DC12CB4F4EB00ABF9B6 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DBE2CB4F4EB00ABF9B6 /* TrackCell.swift */; };
+		D9DB7DC32CB9056000ABF9B6 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DC22CB9056000ABF9B6 /* ListCell.swift */; };
+		D9DB7DC42CB9056000ABF9B6 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DC22CB9056000ABF9B6 /* ListCell.swift */; };
+		D9DB7DC52CB9056000ABF9B6 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DC22CB9056000ABF9B6 /* ListCell.swift */; };
+		D9DB7DC72CB908E400ABF9B6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DC62CB908E400ABF9B6 /* HeaderView.swift */; };
+		D9DB7DC82CB908E400ABF9B6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DC62CB908E400ABF9B6 /* HeaderView.swift */; };
+		D9DB7DC92CB908E400ABF9B6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DC62CB908E400ABF9B6 /* HeaderView.swift */; };
 		D9F638D22CA460840027AEF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F638D12CA460840027AEF6 /* AppDelegate.swift */; };
 		D9F638D62CA460840027AEF6 /* TitleBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F638D52CA460840027AEF6 /* TitleBarController.swift */; };
 		D9F638DB2CA460850027AEF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F638DA2CA460850027AEF6 /* Assets.xcassets */; };
@@ -58,6 +70,10 @@
 		D9DB7DAE2CA9427400ABF9B6 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		D9DB7DB22CAA0FDA00ABF9B6 /* PlaylistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCell.swift; sourceTree = "<group>"; };
 		D9DB7DB62CAD210600ABF9B6 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		D9DB7DBA2CB3AB5E00ABF9B6 /* ProjectTwoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTwoController.swift; sourceTree = "<group>"; };
+		D9DB7DBE2CB4F4EB00ABF9B6 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		D9DB7DC22CB9056000ABF9B6 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		D9DB7DC62CB908E400ABF9B6 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D9F638CE2CA460840027AEF6 /* Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F638D12CA460840027AEF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9F638D52CA460840027AEF6 /* TitleBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarController.swift; sourceTree = "<group>"; };
@@ -122,12 +138,16 @@
 				D9F639012CA4625B0027AEF6 /* Files */,
 				D9F638D12CA460840027AEF6 /* AppDelegate.swift */,
 				D9DB7DAE2CA9427400ABF9B6 /* MenuBar.swift */,
+				D9DB7DBE2CB4F4EB00ABF9B6 /* TrackCell.swift */,
 				D9DB7DA62CA6898A00ABF9B6 /* Factories.swift */,
 				D9F638D52CA460840027AEF6 /* TitleBarController.swift */,
 				D9DB7DAA2CA941C200ABF9B6 /* HomeController.swift */,
 				D9DB7DB22CAA0FDA00ABF9B6 /* PlaylistCell.swift */,
 				D9DB7DA22CA6814400ABF9B6 /* Container.swift */,
 				D9DB7DB62CAD210600ABF9B6 /* Data.swift */,
+				D9DB7DBA2CB3AB5E00ABF9B6 /* ProjectTwoController.swift */,
+				D9DB7DC22CB9056000ABF9B6 /* ListCell.swift */,
+				D9DB7DC62CB908E400ABF9B6 /* HeaderView.swift */,
 			);
 			path = Spotify;
 			sourceTree = "<group>";
@@ -290,9 +310,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9F638D62CA460840027AEF6 /* TitleBarController.swift in Sources */,
+				D9DB7DBB2CB3AB5E00ABF9B6 /* ProjectTwoController.swift in Sources */,
 				D9DB7DB32CAA0FDA00ABF9B6 /* PlaylistCell.swift in Sources */,
 				D9DB7DA32CA6814400ABF9B6 /* Container.swift in Sources */,
 				D9DB7DAF2CA9427400ABF9B6 /* MenuBar.swift in Sources */,
+				D9DB7DBF2CB4F4EB00ABF9B6 /* TrackCell.swift in Sources */,
+				D9DB7DC32CB9056000ABF9B6 /* ListCell.swift in Sources */,
+				D9DB7DC72CB908E400ABF9B6 /* HeaderView.swift in Sources */,
 				D9DB7DA72CA6898A00ABF9B6 /* Factories.swift in Sources */,
 				D9F638D22CA460840027AEF6 /* AppDelegate.swift in Sources */,
 				D9DB7DAB2CA941C200ABF9B6 /* HomeController.swift in Sources */,
@@ -305,9 +329,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9DB7DB82CAD210600ABF9B6 /* Data.swift in Sources */,
+				D9DB7DBC2CB3AB5E00ABF9B6 /* ProjectTwoController.swift in Sources */,
+				D9DB7DC02CB4F4EB00ABF9B6 /* TrackCell.swift in Sources */,
+				D9DB7DC42CB9056000ABF9B6 /* ListCell.swift in Sources */,
 				D9DB7DAC2CA941C200ABF9B6 /* HomeController.swift in Sources */,
 				D9DB7DA82CA6898A00ABF9B6 /* Factories.swift in Sources */,
 				D9F638E92CA460860027AEF6 /* SpotifyTests.swift in Sources */,
+				D9DB7DC82CB908E400ABF9B6 /* HeaderView.swift in Sources */,
 				D9DB7DA42CA6814400ABF9B6 /* Container.swift in Sources */,
 				D9DB7DB02CA9427400ABF9B6 /* MenuBar.swift in Sources */,
 				D9DB7DB42CAA0FDA00ABF9B6 /* PlaylistCell.swift in Sources */,
@@ -319,9 +347,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9F638F32CA460860027AEF6 /* SpotifyUITests.swift in Sources */,
+				D9DB7DBD2CB3AB5E00ABF9B6 /* ProjectTwoController.swift in Sources */,
 				D9DB7DB52CAA0FDA00ABF9B6 /* PlaylistCell.swift in Sources */,
 				D9DB7DA52CA6814400ABF9B6 /* Container.swift in Sources */,
 				D9DB7DB12CA9427400ABF9B6 /* MenuBar.swift in Sources */,
+				D9DB7DC12CB4F4EB00ABF9B6 /* TrackCell.swift in Sources */,
+				D9DB7DC52CB9056000ABF9B6 /* ListCell.swift in Sources */,
+				D9DB7DC92CB908E400ABF9B6 /* HeaderView.swift in Sources */,
 				D9DB7DA92CA6898A00ABF9B6 /* Factories.swift in Sources */,
 				D9F638F52CA460860027AEF6 /* SpotifyUITestsLaunchTests.swift in Sources */,
 				D9DB7DAD2CA941C200ABF9B6 /* HomeController.swift in Sources */,

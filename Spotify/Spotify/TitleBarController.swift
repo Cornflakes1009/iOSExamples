@@ -7,26 +7,6 @@
 
 import UIKit
 
-class MusicViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBlue
-    }
-}
-
-class PodcastViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemYellow
-    }
-}
-
-
-
-
-
-
-
 class TitleBarController: UIViewController {
     var musicBarButtonItem: UIBarButtonItem!
     var podcastBarButtonItem: UIBarButtonItem!
@@ -34,13 +14,25 @@ class TitleBarController: UIViewController {
     let container = Container()
     let viewControllers: [UIViewController] = [HomeController(), HomeController()]
     
+    let spotifyProjectTwoBtn = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Project 2", for: .normal)
+        btn.backgroundColor = .spotifyGreen
+        btn.tintColor = .spotifyBlack
+        btn.layer.cornerRadius = 5
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+        btn.addTarget(nil, action: #selector(projectTwoTapped), for: .touchUpInside)
+        return btn
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavBar()
         setupViews()
     }
-
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
         
@@ -68,11 +60,18 @@ class TitleBarController: UIViewController {
         containerView.translatesAutoresizingMaskIntoConstraints = false
         containerView.backgroundColor = .systemCyan
         view.addSubview(containerView)
+        
+        view.addSubview(spotifyProjectTwoBtn)
+        
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2), // each multiplier is 8pts
             containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            
+            spotifyProjectTwoBtn.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
+            spotifyProjectTwoBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            spotifyProjectTwoBtn.widthAnchor.constraint(equalToConstant: 80),
         ])
         
         musicTapped() // just to make it by default when the app opens
@@ -82,10 +81,10 @@ class TitleBarController: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: selector, for: .primaryActionTriggered)
-         let attributes = [
+        let attributes = [
             NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .largeTitle).withTraits(traits: [.traitBold]),
             NSAttributedString.Key.foregroundColor: UIColor.label
-         ]
+        ]
         
         let attributedText = NSMutableAttributedString(string: text, attributes: attributes)
         button.setAttributedTitle(attributedText, for: .normal)
@@ -123,12 +122,19 @@ class TitleBarController: UIViewController {
         })
     }
     
+    @objc func projectTwoTapped() {
+        let vc = ProjectTwoController()
+//        newViewController.modalPresentationStyle = .fullScreen // Optional: Specify the presentation style
+//        self.present(vc, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func animateTransition(fromVC: UIViewController, toVC: UIViewController, completion: @escaping ((Bool) -> Void)) {
         guard
             let fromView = fromVC.view,
             let fromIndex = getIndex(forViewController: fromVC),
             let toView = toVC.view,
-            let toIndex = getIndex(forViewController: toVC) 
+            let toIndex = getIndex(forViewController: toVC)
         else {
             return
         }
