@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D953E9722CBCE93D00D617CE /* ProjectThreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953E9712CBCE93D00D617CE /* ProjectThreeController.swift */; };
+		D953E9752CBCE9A500D617CE /* SpotifyiOS in Frameworks */ = {isa = PBXBuildFile; productRef = D953E9742CBCE9A500D617CE /* SpotifyiOS */; };
 		D9DB7DA32CA6814400ABF9B6 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DA22CA6814400ABF9B6 /* Container.swift */; };
 		D9DB7DA42CA6814400ABF9B6 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DA22CA6814400ABF9B6 /* Container.swift */; };
 		D9DB7DA52CA6814400ABF9B6 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DA22CA6814400ABF9B6 /* Container.swift */; };
@@ -37,6 +39,9 @@
 		D9DB7DC72CB908E400ABF9B6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DC62CB908E400ABF9B6 /* HeaderView.swift */; };
 		D9DB7DC82CB908E400ABF9B6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DC62CB908E400ABF9B6 /* HeaderView.swift */; };
 		D9DB7DC92CB908E400ABF9B6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DC62CB908E400ABF9B6 /* HeaderView.swift */; };
+		D9DB7DCB2CBB65E300ABF9B6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DCA2CBB65E300ABF9B6 /* RootViewController.swift */; };
+		D9DB7DCC2CBB65E300ABF9B6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DCA2CBB65E300ABF9B6 /* RootViewController.swift */; };
+		D9DB7DCD2CBB65E300ABF9B6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB7DCA2CBB65E300ABF9B6 /* RootViewController.swift */; };
 		D9F638D22CA460840027AEF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F638D12CA460840027AEF6 /* AppDelegate.swift */; };
 		D9F638D62CA460840027AEF6 /* TitleBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F638D52CA460840027AEF6 /* TitleBarController.swift */; };
 		D9F638DB2CA460850027AEF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9F638DA2CA460850027AEF6 /* Assets.xcassets */; };
@@ -64,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D953E9712CBCE93D00D617CE /* ProjectThreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectThreeController.swift; sourceTree = "<group>"; };
 		D9DB7DA22CA6814400ABF9B6 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		D9DB7DA62CA6898A00ABF9B6 /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
 		D9DB7DAA2CA941C200ABF9B6 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 		D9DB7DBE2CB4F4EB00ABF9B6 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		D9DB7DC22CB9056000ABF9B6 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		D9DB7DC62CB908E400ABF9B6 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		D9DB7DCA2CBB65E300ABF9B6 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		D9F638CE2CA460840027AEF6 /* Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F638D12CA460840027AEF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9F638D52CA460840027AEF6 /* TitleBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBarController.swift; sourceTree = "<group>"; };
@@ -92,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D953E9752CBCE9A500D617CE /* SpotifyiOS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +148,7 @@
 				D9DB7DAE2CA9427400ABF9B6 /* MenuBar.swift */,
 				D9DB7DBE2CB4F4EB00ABF9B6 /* TrackCell.swift */,
 				D9DB7DA62CA6898A00ABF9B6 /* Factories.swift */,
+				D9DB7DCA2CBB65E300ABF9B6 /* RootViewController.swift */,
 				D9F638D52CA460840027AEF6 /* TitleBarController.swift */,
 				D9DB7DAA2CA941C200ABF9B6 /* HomeController.swift */,
 				D9DB7DB22CAA0FDA00ABF9B6 /* PlaylistCell.swift */,
@@ -148,6 +157,7 @@
 				D9DB7DBA2CB3AB5E00ABF9B6 /* ProjectTwoController.swift */,
 				D9DB7DC22CB9056000ABF9B6 /* ListCell.swift */,
 				D9DB7DC62CB908E400ABF9B6 /* HeaderView.swift */,
+				D953E9712CBCE93D00D617CE /* ProjectThreeController.swift */,
 			);
 			path = Spotify;
 			sourceTree = "<group>";
@@ -195,6 +205,9 @@
 			dependencies = (
 			);
 			name = Spotify;
+			packageProductDependencies = (
+				D953E9742CBCE9A500D617CE /* SpotifyiOS */,
+			);
 			productName = Spotify;
 			productReference = D9F638CE2CA460840027AEF6 /* Spotify.app */;
 			productType = "com.apple.product-type.application";
@@ -267,6 +280,9 @@
 				Base,
 			);
 			mainGroup = D9F638C52CA460840027AEF6;
+			packageReferences = (
+				D953E9732CBCE9A500D617CE /* XCRemoteSwiftPackageReference "ios-sdk" */,
+			);
 			productRefGroup = D9F638CF2CA460840027AEF6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -313,7 +329,9 @@
 				D9DB7DBB2CB3AB5E00ABF9B6 /* ProjectTwoController.swift in Sources */,
 				D9DB7DB32CAA0FDA00ABF9B6 /* PlaylistCell.swift in Sources */,
 				D9DB7DA32CA6814400ABF9B6 /* Container.swift in Sources */,
+				D9DB7DCB2CBB65E300ABF9B6 /* RootViewController.swift in Sources */,
 				D9DB7DAF2CA9427400ABF9B6 /* MenuBar.swift in Sources */,
+				D953E9722CBCE93D00D617CE /* ProjectThreeController.swift in Sources */,
 				D9DB7DBF2CB4F4EB00ABF9B6 /* TrackCell.swift in Sources */,
 				D9DB7DC32CB9056000ABF9B6 /* ListCell.swift in Sources */,
 				D9DB7DC72CB908E400ABF9B6 /* HeaderView.swift in Sources */,
@@ -339,6 +357,7 @@
 				D9DB7DA42CA6814400ABF9B6 /* Container.swift in Sources */,
 				D9DB7DB02CA9427400ABF9B6 /* MenuBar.swift in Sources */,
 				D9DB7DB42CAA0FDA00ABF9B6 /* PlaylistCell.swift in Sources */,
+				D9DB7DCC2CBB65E300ABF9B6 /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +369,7 @@
 				D9DB7DBD2CB3AB5E00ABF9B6 /* ProjectTwoController.swift in Sources */,
 				D9DB7DB52CAA0FDA00ABF9B6 /* PlaylistCell.swift in Sources */,
 				D9DB7DA52CA6814400ABF9B6 /* Container.swift in Sources */,
+				D9DB7DCD2CBB65E300ABF9B6 /* RootViewController.swift in Sources */,
 				D9DB7DB12CA9427400ABF9B6 /* MenuBar.swift in Sources */,
 				D9DB7DC12CB4F4EB00ABF9B6 /* TrackCell.swift in Sources */,
 				D9DB7DC52CB9056000ABF9B6 /* ListCell.swift in Sources */,
@@ -680,6 +700,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D953E9732CBCE9A500D617CE /* XCRemoteSwiftPackageReference "ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spotify/ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D953E9742CBCE9A500D617CE /* SpotifyiOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D953E9732CBCE9A500D617CE /* XCRemoteSwiftPackageReference "ios-sdk" */;
+			productName = SpotifyiOS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D9F638C62CA460840027AEF6 /* Project object */;
 }
