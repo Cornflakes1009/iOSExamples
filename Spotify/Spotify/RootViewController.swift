@@ -64,7 +64,7 @@ class RootViewController: UIViewController {
         } else if sender == projectTwoBtn {
             vc = ProjectTwoController()
         } else if sender == projectThreeBtn {
-            return 
+            vc = ProjectThreeController()
         }
         if let vc = vc {
             navigationController?.pushViewController(vc, animated: false)
