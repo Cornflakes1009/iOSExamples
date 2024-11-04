@@ -16,30 +16,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let homeVC = makeNavigationController(rootViewController: HomeVC())
-        let scanVC = makeNavigationController(rootViewController: ScanVC())
-        let giftVC = makeNavigationController(rootViewController: GiftVC())
-        let orderVC = makeNavigationController(rootViewController: OrderVC())
-        let storeVC = makeNavigationController(rootViewController: StoreVC())
+        let homeVC = HomeVC()
+        let scanVC = UINavigationController(rootViewController: ScanVC())
+        let giftVC = UINavigationController(rootViewController: GiftVC())
+        let orderVC = UINavigationController(rootViewController: OrderVC())
+        let storeVC = UINavigationController(rootViewController: StoreVC())
         
         
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [homeVC, scanVC, giftVC, orderVC, storeVC]
         window?.rootViewController = tabBarController
+        
+        tabBarController.tabBar.tintColor = .lightGreen
+        tabBarController.tabBar.isTranslucent = false
         return true
     }
     
-    func makeNavigationController(rootViewController: UIViewController) -> UINavigationController {
-        let navigationController = UINavigationController(rootViewController: rootViewController)
-        navigationController.navigationBar.prefersLargeTitles = true
-        
-        let attrs = [
-            NSAttributedString.Key.foregroundColor: UIColor.label,
-            NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title1).bold()
-        ]
-        
-        navigationController.navigationBar.largeTitleTextAttributes = attrs
-        
-        return navigationController
-    }
+//    func makeNavigationController(rootViewController: UIViewController) -> UINavigationController {
+//        let navigationController = UINavigationController(rootViewController: rootViewController)
+//        navigationController.navigationBar.prefersLargeTitles = true
+//        
+//        let attrs = [
+//            NSAttributedString.Key.foregroundColor: UIColor.label,
+//            NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title1).bold()
+//        ]
+//        
+//        navigationController.navigationBar.largeTitleTextAttributes = attrs
+//        
+//        return navigationController
+//    }
 }

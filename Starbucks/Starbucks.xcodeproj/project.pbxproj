@@ -20,6 +20,8 @@
 		D953E9FB2CBF8E1700D617CE /* GiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953E9FA2CBF8E1700D617CE /* GiftVC.swift */; };
 		D953E9FD2CBF8E9A00D617CE /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953E9FC2CBF8E9A00D617CE /* StoreVC.swift */; };
 		D953E9FF2CBF921200D617CE /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953E9FE2CBF921200D617CE /* Factories.swift */; };
+		D953EA022CC47F4000D617CE /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D953EA012CC47F4000D617CE /* HomeHeaderView.swift */; };
+		D95A07252CCE354D008CA300 /* TileViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95A07242CCE354D008CA300 /* TileViewVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		D953E9FA2CBF8E1700D617CE /* GiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftVC.swift; sourceTree = "<group>"; };
 		D953E9FC2CBF8E9A00D617CE /* StoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
 		D953E9FE2CBF921200D617CE /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
+		D953EA012CC47F4000D617CE /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		D95A07242CCE354D008CA300 /* TileViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +114,7 @@
 				D953E98D2CBD82F400D617CE /* AppDelegate.swift */,
 				D953E9FE2CBF921200D617CE /* Factories.swift */,
 				D953E9BD2CBD83C000D617CE /* Files */,
-				D953E9912CBD82F400D617CE /* HomeVC.swift */,
+				D953EA002CC47F0A00D617CE /* Home */,
 				D953E9F42CBF8D4000D617CE /* StarbucksVC.swift */,
 				D953E9F62CBF8D8200D617CE /* ScanVC.swift */,
 				D953E9F82CBF8DD300D617CE /* OrderVC.swift */,
@@ -145,6 +149,16 @@
 				D953E99B2CBD82F500D617CE /* Info.plist */,
 			);
 			name = Files;
+			sourceTree = "<group>";
+		};
+		D953EA002CC47F0A00D617CE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D953E9912CBD82F400D617CE /* HomeVC.swift */,
+				D953EA012CC47F4000D617CE /* HomeHeaderView.swift */,
+				D95A07242CCE354D008CA300 /* TileViewVC.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,10 +294,12 @@
 				D953E9922CBD82F400D617CE /* HomeVC.swift in Sources */,
 				D953E9FD2CBF8E9A00D617CE /* StoreVC.swift in Sources */,
 				D953E9FF2CBF921200D617CE /* Factories.swift in Sources */,
+				D953EA022CC47F4000D617CE /* HomeHeaderView.swift in Sources */,
 				D953E9F72CBF8D8200D617CE /* ScanVC.swift in Sources */,
 				D953E9F52CBF8D4000D617CE /* StarbucksVC.swift in Sources */,
 				D953E98E2CBD82F400D617CE /* AppDelegate.swift in Sources */,
 				D953E9FB2CBF8E1700D617CE /* GiftVC.swift in Sources */,
+				D95A07252CCE354D008CA300 /* TileViewVC.swift in Sources */,
 				D953E9F92CBF8DD300D617CE /* OrderVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
