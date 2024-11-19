@@ -8,6 +8,9 @@
 import Foundation
 
 class DeveloperPreview {
+    
+    static let shared = DeveloperPreview()
+    
     var listings: [Listing] = [
         .init(
             id: NSUUID().uuidString,
@@ -58,17 +61,17 @@ class DeveloperPreview {
             ownerUid: NSUUID().uuidString,
             ownerName: "Jesse Pinkman",
             ownerImageUrl: "male-profile-photo",
-            numberOfBedrooms: 4,
-            numberOfBathrooms: 3,
-            numberOfGuests: 8,
-            numberOfBeds: 4,
+            numberOfBedrooms: 18,
+            numberOfBathrooms: 18,
+            numberOfGuests: 100,
+            numberOfBeds: 18,
             pricePerNight: 12,
             latitude: 26.7850,
             longitude: -81.1936,
-            imageUrls: ["listing-4", "listing-3", "listing-2", "listing-`"],
+            imageUrls: ["listing-4", "listing-3", "listing-2", "listing-7`"],
             address: "203 W Evergreen",
-            city: "Ft. Lauderdale",
-            state: "Florida",
+            city: "Los Angeles",
+            state: "California",
             title: "Crack House",
             rating: 0.2,
             features: [.selfCheckIn],

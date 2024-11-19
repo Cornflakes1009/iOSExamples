@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct MainTabView: View {
+    let listing: Listing
     var body: some View {
         TabView {
-            ExploreView()
+            ExploreView(listing: listing)
                 .tabItem { Label("Explore", systemImage: "magnifyingglass") }
             
             WishlistsView()
@@ -23,5 +24,5 @@ struct MainTabView: View {
 }
 
 #Preview {
-    MainTabView()
+    MainTabView(listing: DeveloperPreview.shared.listings[0])
 }
