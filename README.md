@@ -4,6 +4,7 @@ iOS Example Projects with useful features to reference.
 ## AirBnb Clone
 iOS project using SwiftUI
 https://www.youtube.com/watch?v=-ad4qLKep3U&t=5756s
+* Note: The back arrow button is a bit odd. You have to click it to the lower left. 
 
 
 ## Spotify
@@ -20,3 +21,11 @@ https://www.youtube.com/watch?v=ez4cQWx-q9o&list=PLEVREFF3xBv6B8HTm_ED-8fok5DjQe
 ## Starbucks
 iOS Project that's a clone of the Starbucks app
 https://www.youtube.com/watch?v=EyY2ICO2QYk&list=PLEVREFF3xBv4fLwWvXZoY8cKC6F5P-rlY
+
+
+## ToDo List
+iOS Project that is a to do list app with authentication and Firebase storage
+https://www.youtube.com/watch?v=t_mypMqSXNw&t=144s
+
+
+
