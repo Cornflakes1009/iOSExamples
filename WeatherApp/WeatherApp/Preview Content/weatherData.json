@@ -1,0 +1,46 @@
+{
+    "coord": {
+        "lon": -124.1732,
+        "lat": 46.9346
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 42.98,
+        "feels_like": 39.31,
+        "temp_min": 41.07,
+        "temp_max": 46.02,
+        "pressure": 1024,
+        "humidity": 84,
+        "sea_level": 1024,
+        "grnd_level": 1024
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 5.99,
+        "deg": 104,
+        "gust": 13
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1733340149,
+    "sys": {
+        "type": 2,
+        "id": 2003139,
+        "country": "US",
+        "sunrise": 1733327151,
+        "sunset": 1733358531
+    },
+    "timezone": -28800,
+    "id": 5805505,
+    "name": "Ocean Shores",
+    "cod": 200
+}

@@ -28,4 +28,8 @@ iOS Project that is a to do list app with authentication and Firebase storage. I
 https://www.youtube.com/watch?v=t_mypMqSXNw&t=144s
 
 
+## Weather App
+iOS Project that utilized the OpenWeather API to display weather data in a SwiftUI App.
+https://www.youtube.com/watch?v=X2W9MPjrIbk
+
 
