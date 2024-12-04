@@ -8,8 +8,31 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @StateObject var viewModel = RegisterViewViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HeaderView(title: "Register", subtitle: "Start organizing todo", angle: -15, background: .orange)
+        
+        Form {
+            TextField("Full name", text: $viewModel.name)
+                .textFieldStyle(DefaultTextFieldStyle())
+                .textInputAutocapitalization(.never)
+            
+            TextField("Email Address", text: $viewModel.email)
+                .textFieldStyle(DefaultTextFieldStyle())
+                .textInputAutocapitalization(.never)
+            
+            SecureField("Password", text: $viewModel.password)
+                .textFieldStyle(DefaultTextFieldStyle())
+            
+            TLButton(title: "Create Account", background: .green, action: {
+                viewModel.register()
+            })
+            .padding()
+        }
+        .offset(y: -50)
+        
+        Spacer()
     }
 }
 

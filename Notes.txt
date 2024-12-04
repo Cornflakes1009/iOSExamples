@@ -1,3 +1,6 @@
 
 
 CMD + Option + P refreshes Canvas
+
+
+SwiftUI template doesn't include a Launch Screen. File > New File > Launch Screen > Project > General tab > App Icons and Launch Screen > choose Launch Screen file. 

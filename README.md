@@ -24,7 +24,7 @@ https://www.youtube.com/watch?v=EyY2ICO2QYk&list=PLEVREFF3xBv4fLwWvXZoY8cKC6F5P-
 
 
 ## ToDo List
-iOS Project that is a to do list app with authentication and Firebase storage
+iOS Project that is a to do list app with authentication and Firebase storage. Interface built in SwiftUI.
 https://www.youtube.com/watch?v=t_mypMqSXNw&t=144s
 
 
