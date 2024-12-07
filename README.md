@@ -33,3 +33,6 @@ iOS Project that utilized the OpenWeather API to display weather data in a Swift
 https://www.youtube.com/watch?v=X2W9MPjrIbk
 
 
+## TikTok Clone
+iOS Project using SwiftUI
+https://www.youtube.com/watch?v=CnZKM9tFg7I
