@@ -11,7 +11,7 @@ struct MainTabView: View {
     @State private var selectedTab = 0
     var body: some View {
         TabView(selection: $selectedTab) {
-            Text("Feed")
+            FeedView()
                 .tabItem {
                     VStack {
                         // the symbol variants allows for changing from the filled to not.
@@ -23,7 +23,7 @@ struct MainTabView: View {
                 .onAppear { selectedTab = 0 }
                 .tag(0)
             
-            Text("Friends")
+            ExploreView()
                 .tabItem {
                     VStack {
                         Image(systemName: selectedTab == 1 ? "person.2.fill" : "person.2")
@@ -41,7 +41,7 @@ struct MainTabView: View {
                 .onAppear { selectedTab = 2 }
                 .tag(2)
             
-            Text("Notifications")
+            NotificationsView()
                 .tabItem {
                     VStack {
                         Image(systemName: selectedTab == 3 ? "heart.fill" : "heart")
@@ -52,7 +52,7 @@ struct MainTabView: View {
                 .onAppear { selectedTab = 3 }
                 .tag(3)
             
-            Text("Profile")
+            CurrentUserProfileView()
                 .tabItem {
                     VStack {
                         Image(systemName: selectedTab == 4 ? "person.fill" : "person")
