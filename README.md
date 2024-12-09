@@ -36,3 +36,8 @@ https://www.youtube.com/watch?v=X2W9MPjrIbk
 ## TikTok Clone
 iOS Project using SwiftUI
 https://www.youtube.com/watch?v=CnZKM9tFg7I
+
+
+## BiometricAuthExample
+iOS Project using Face Id and Touch Id to authenticate. Loosely based on the below tutorial. The solution doesn't handle Apple's default response to Face/Touch Id failing. To use Face Id in the simulator, go to Features > Face Id > Enroll and then Features > Face Id > Matching or Non-Matching Face accordingly. 
+https://www.youtube.com/watch?v=SHmDljfu2lk
