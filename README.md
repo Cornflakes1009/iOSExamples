@@ -41,3 +41,19 @@ https://www.youtube.com/watch?v=CnZKM9tFg7I
 ## BiometricAuthExample
 iOS Project using Face Id and Touch Id to authenticate. Loosely based on the below tutorial. The solution doesn't handle Apple's default response to Face/Touch Id failing. To use Face Id in the simulator, go to Features > Face Id > Enroll and then Features > Face Id > Matching or Non-Matching Face accordingly. 
 https://www.youtube.com/watch?v=SHmDljfu2lk
+
+
+## Authenticator
+More advanced version of BiometricAuthExample. Need to use a physical device for the "Try Face ID Again" prompt to work. 
+https://www.youtube.com/watch?v=qW1wQwHmoTI
+
+
+## CompoundInterest Playground
+Simple function used to calculate compound interest over a period of months. 
+
+
+## Udemy - DSA
+Data Structures and Algorithms course using Swift from Udemy. Covers most major data types. Trees, Hash Maps, Linked Lists, Binary Trees, Graphs, etc. 
+
+
+
