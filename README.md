@@ -56,6 +56,11 @@ Simple function used to calculate compound interest over a period of months.
 Data Structures and Algorithms course using Swift from Udemy. Covers most major data types. Trees, Hash Maps, Linked Lists, Binary Trees, Graphs, etc. 
 
 
-OpenTriviaDB
+## OpenTriviaDB
 iOS trivia game using the Open Trivia DB and SwiftUI. 
 https://www.youtube.com/watch?v=b55npVkqa5U&t=272s
+
+
+## ScrumDinger
+The first tutorial from Apple's App Dev Tutorials
+https://developer.apple.com/tutorials/app-dev-training/getting-started-with-scrumdinger
