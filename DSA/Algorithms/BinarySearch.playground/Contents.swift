@@ -44,3 +44,34 @@ for num in 1...100 {
     hundredNumbers.append(num)
 }
 print(binarySearchForSearchValue(searchValue: 99, array: hundredNumbers))
+
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20]
+
+func binarySearch(array: [Int], key: Int) -> Bool {
+    if array.count == 0 { return false }
+    
+    let minIndex = 0
+    let maxIndex = array.count - 1
+    let midIndex = maxIndex / 2
+    let midValue = array[minIndex]
+    
+    if key < array[minIndex] || key > array[maxIndex] { return false }
+    
+    if key > midValue {
+        let slice = Array(array[midIndex + 1...maxIndex])
+        return binarySearch(array: slice, key: key)
+    }
+    
+    if key < midValue {
+        let slice = Array(array[minIndex + 1...midIndex - 1])
+        return binarySearch(array: slice, key: key)
+    }
+    
+    if key == midValue {
+        return true
+    }
+    
+    return false
+}
+
+binarySearch(array: arr, key: 16)

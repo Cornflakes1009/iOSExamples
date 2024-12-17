@@ -28,3 +28,30 @@ func mostCommonNameInArray(array: [String]) -> String {
 }
 
 print(mostCommonNameInArray(array: networkManagerArray))
+
+import UIKit
+
+var arr = [9, 14, 22, 22, 22, 8, 0, -4, 29]
+//
+func findMostCommon(array: [Int]) -> Int {
+    var currentHighestElement = 0
+    var tempCounter = 0
+    var highScore = 0
+
+    for index in array {
+        for item in array {
+            if item == index  {
+                tempCounter += 1
+
+                if tempCounter > highScore {
+                    currentHighestElement = index
+                    highScore = tempCounter
+                }
+            }
+        }
+        tempCounter = 0
+    }
+    return currentHighestElement
+}
+
+findMostCommon(array: arr)
