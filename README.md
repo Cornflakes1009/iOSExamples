@@ -1,5 +1,5 @@
 # iOSExamples
-iOS Example Projects with useful features to reference.
+iOSExamples is a collection of tutorial projects that I've worked on and useful references that I've encountered.  
 
 ## AirBnb Clone
 iOS project using SwiftUI
@@ -19,7 +19,7 @@ https://www.youtube.com/watch?v=ez4cQWx-q9o&list=PLEVREFF3xBv6B8HTm_ED-8fok5DjQe
 
 
 ## Starbucks
-iOS Project that's a clone of the Starbucks app
+iOS Project that uses UIKit and is a clone of the Starbucks app. Not completed.
 https://www.youtube.com/watch?v=EyY2ICO2QYk&list=PLEVREFF3xBv4fLwWvXZoY8cKC6F5P-rlY
 
 
@@ -62,5 +62,20 @@ https://www.youtube.com/watch?v=b55npVkqa5U&t=272s
 
 
 ## ScrumDinger
-The first tutorial from Apple's App Dev Tutorials
+The first tutorial from Apple's App Dev Tutorials.
 https://developer.apple.com/tutorials/app-dev-training/getting-started-with-scrumdinger
+
+
+## NetflixClone
+UIKit project with several UICollectionViews.
+https://www.youtube.com/watch?v=KCgYDCKqato
+
+
+## Xylophone
+UIKit with Storyboards xylophone app from an Angela Yu tutorial on Udemy. 
+
+
+## AutoLayoutCalculator
+The Calculator app UI using Storyboards
+
+
