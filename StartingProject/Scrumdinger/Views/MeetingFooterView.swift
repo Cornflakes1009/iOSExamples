@@ -1,9 +1,6 @@
-//
-//  MeetingFooterView.swift
-//  Scrumdinger
-//
-//  Created by Harold Davidson on 12/18/24.
-//
+/*
+ See LICENSE folder for this sample’s licensing information.
+ */
 
 import SwiftUI
 
@@ -22,6 +19,7 @@ struct MeetingFooterView: View {
         guard let speakerNumber = speakerNumber else { return "No more speakers" }
         return "Speaker \(speakerNumber) of \(speakers.count)"
     }
+    
     var body: some View {
         VStack {
             HStack {
@@ -41,7 +39,9 @@ struct MeetingFooterView: View {
     }
 }
 
-#Preview {
-    MeetingFooterView(speakers: DailyScrum.sampleData[0].attendees.speakers, skipAction: {})
-        .previewLayout(.sizeThatFits)
+struct MeetingFooterView_Previews: PreviewProvider {
+    static var previews: some View {
+        MeetingFooterView(speakers: DailyScrum.sampleData[0].attendees.speakers, skipAction: {})
+            .previewLayout(.sizeThatFits)
+    }
 }
