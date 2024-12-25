@@ -62,7 +62,7 @@ https://www.youtube.com/watch?v=b55npVkqa5U&t=272s
 
 
 ## ScrumDinger
-The first tutorial from Apple's App Dev Tutorials.
+The first tutorial from Apple's App Dev Tutorials. This contains several projects inside of the repo. This is due to Apple providing starter projects with data to download. Things such as dummy data to populate the previews. 
 https://developer.apple.com/tutorials/app-dev-training/getting-started-with-scrumdinger
 
 
