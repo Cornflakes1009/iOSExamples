@@ -16,6 +16,8 @@
 		D9E4D8EB2D1BCBF90007A8E9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4D8EA2D1BCBF90007A8E9 /* Colors.swift */; };
 		D9E4D8ED2D1BCC180007A8E9 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4D8EC2D1BCC180007A8E9 /* Gradients.swift */; };
 		D9E4D8EF2D1BCC3E0007A8E9 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4D8EE2D1BCC3E0007A8E9 /* Images.swift */; };
+		D9E4D8F12D1D0A760007A8E9 /* Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4D8F02D1D0A760007A8E9 /* Frames.swift */; };
+		D9E4D8F32D1D2EC70007A8E9 /* BackgroundsAndOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4D8F22D1D2EC70007A8E9 /* BackgroundsAndOverlays.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		D9E4D8EA2D1BCBF90007A8E9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D9E4D8EC2D1BCC180007A8E9 /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
 		D9E4D8EE2D1BCC3E0007A8E9 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		D9E4D8F02D1D0A760007A8E9 /* Frames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frames.swift; sourceTree = "<group>"; };
+		D9E4D8F22D1D2EC70007A8E9 /* BackgroundsAndOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundsAndOverlays.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				D9E4D8EA2D1BCBF90007A8E9 /* Colors.swift */,
 				D9E4D8EC2D1BCC180007A8E9 /* Gradients.swift */,
 				D9E4D8EE2D1BCC3E0007A8E9 /* Images.swift */,
+				D9E4D8F02D1D0A760007A8E9 /* Frames.swift */,
+				D9E4D8F22D1D2EC70007A8E9 /* BackgroundsAndOverlays.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 				D9E4D8EB2D1BCBF90007A8E9 /* Colors.swift in Sources */,
 				D9E4D8E92D1BCBD30007A8E9 /* TextView.swift in Sources */,
 				D9E4D8D62D1BCB540007A8E9 /* SwiftfulThinkingApp.swift in Sources */,
+				D9E4D8F32D1D2EC70007A8E9 /* BackgroundsAndOverlays.swift in Sources */,
+				D9E4D8F12D1D0A760007A8E9 /* Frames.swift in Sources */,
 				D9E4D8E52D1BCB730007A8E9 /* Shapes.swift in Sources */,
 				D9E4D8ED2D1BCC180007A8E9 /* Gradients.swift in Sources */,
 			);
