@@ -18,6 +18,7 @@
 		D9E4D8EF2D1BCC3E0007A8E9 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4D8EE2D1BCC3E0007A8E9 /* Images.swift */; };
 		D9E4D8F12D1D0A760007A8E9 /* Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4D8F02D1D0A760007A8E9 /* Frames.swift */; };
 		D9E4D8F32D1D2EC70007A8E9 /* BackgroundsAndOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4D8F22D1D2EC70007A8E9 /* BackgroundsAndOverlays.swift */; };
+		D9E4D8F52D1E4AE00007A8E9 /* Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4D8F42D1E4AE00007A8E9 /* Stacks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		D9E4D8EE2D1BCC3E0007A8E9 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		D9E4D8F02D1D0A760007A8E9 /* Frames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frames.swift; sourceTree = "<group>"; };
 		D9E4D8F22D1D2EC70007A8E9 /* BackgroundsAndOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundsAndOverlays.swift; sourceTree = "<group>"; };
+		D9E4D8F42D1E4AE00007A8E9 /* Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stacks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				D9E4D8EE2D1BCC3E0007A8E9 /* Images.swift */,
 				D9E4D8F02D1D0A760007A8E9 /* Frames.swift */,
 				D9E4D8F22D1D2EC70007A8E9 /* BackgroundsAndOverlays.swift */,
+				D9E4D8F42D1E4AE00007A8E9 /* Stacks.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9E4D8F52D1E4AE00007A8E9 /* Stacks.swift in Sources */,
 				D9E4D8EF2D1BCC3E0007A8E9 /* Images.swift in Sources */,
 				D9E4D8D82D1BCB540007A8E9 /* ContentView.swift in Sources */,
 				D9E4D8EB2D1BCBF90007A8E9 /* Colors.swift in Sources */,
