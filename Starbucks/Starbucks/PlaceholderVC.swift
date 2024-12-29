@@ -1,5 +1,5 @@
 //
-//  TileViewVC.swift
+//  PlaceholderVC.swift
 //  Starbucks
 //
 //  Created by Harold Davidson on 10/27/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TileViewVC: UIViewController {
+class PlaceholderVC: UIViewController {
     
     let label = UILabel()
     

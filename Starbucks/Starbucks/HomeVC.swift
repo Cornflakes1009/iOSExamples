@@ -10,18 +10,16 @@ import UIKit
 class HomeVC: StarbucksVC {
 
     let headerView = HomeHeaderView()
-    var headerViewTopConstraint: NSLayoutConstraint?
-    
     let scrollView = UIScrollView()
     let stackView = UIStackView()
     
+    var headerViewTopConstraint: NSLayoutConstraint?
+    
     let cellId = "cellId"
     let tiles = [
-        TileViewVC("Star balance"),
-        TileViewVC("Bonus stars"),
-        TileViewVC("Try these"),
-        TileViewVC("Welcome back"),
-        TileViewVC("Uplifting")
+        TileVC(title: "Breakfast made meatless", subtitle: "Try the Beyond Meat, Cheddar * Egg Breakfast Sandwich. Vegetarian and protein-packed.", imageName: "meatless"),
+        TileVC(title: "Uplifting our communities", subtitle: "Thanks to our partners' nominations, The Starbucks Foundation is donating $145k to more than 50 local charities.", imageName: "communities"),
+        TileVC(title: "Spend at least $15 for 50 Bonus Stars", subtitle: "Collect 50 Bonus Stars when you spend at least $15 before taxes.", imageName: "bonus"),
     ]
     
     override func viewDidLoad() {

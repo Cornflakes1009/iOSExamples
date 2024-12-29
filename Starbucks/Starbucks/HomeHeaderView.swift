@@ -16,7 +16,7 @@ class HomeHeaderView: UIView {
         style()
         layout()
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = .systemPink
+        
     }
     
     required init?(coder: NSCoder) {
@@ -26,6 +26,7 @@ class HomeHeaderView: UIView {
     func style() {
         greetingLbl.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         greetingLbl.text = "Good afternoon, Harold ☀️"
+        greetingLbl.textColor = .black
         greetingLbl.numberOfLines = 0
         greetingLbl.lineBreakMode = .byWordWrapping
         

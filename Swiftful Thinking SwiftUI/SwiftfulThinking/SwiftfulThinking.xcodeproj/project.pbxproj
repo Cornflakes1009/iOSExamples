@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D99AD27F2D1FE58C0061FF9B /* Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD27E2D1FE58C0061FF9B /* Initializers.swift */; };
 		D9E4D8D62D1BCB540007A8E9 /* SwiftfulThinkingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4D8D52D1BCB540007A8E9 /* SwiftfulThinkingApp.swift */; };
 		D9E4D8D82D1BCB540007A8E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E4D8D72D1BCB540007A8E9 /* ContentView.swift */; };
 		D9E4D8DA2D1BCB540007A8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9E4D8D92D1BCB540007A8E9 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D99AD27E2D1FE58C0061FF9B /* Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializers.swift; sourceTree = "<group>"; };
 		D9E4D8D22D1BCB540007A8E9 /* SwiftfulThinking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftfulThinking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E4D8D52D1BCB540007A8E9 /* SwiftfulThinkingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftfulThinkingApp.swift; sourceTree = "<group>"; };
 		D9E4D8D72D1BCB540007A8E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				D9E4D8F82D1FDC9E0007A8E9 /* Padding.swift */,
 				D9E4D8F02D1D0A760007A8E9 /* Frames.swift */,
 				D9E4D8F22D1D2EC70007A8E9 /* BackgroundsAndOverlays.swift */,
+				D99AD27E2D1FE58C0061FF9B /* Initializers.swift */,
 				D9E4D8FA2D1FE0720007A8E9 /* SpacerView.swift */,
 				D9E4D8F42D1E4AE00007A8E9 /* Stacks.swift */,
 			);
@@ -185,6 +188,7 @@
 				D9E4D8D62D1BCB540007A8E9 /* SwiftfulThinkingApp.swift in Sources */,
 				D9E4D8F32D1D2EC70007A8E9 /* BackgroundsAndOverlays.swift in Sources */,
 				D9E4D8F12D1D0A760007A8E9 /* Frames.swift in Sources */,
+				D99AD27F2D1FE58C0061FF9B /* Initializers.swift in Sources */,
 				D9E4D8E52D1BCB730007A8E9 /* Shapes.swift in Sources */,
 				D9E4D8ED2D1BCC180007A8E9 /* Gradients.swift in Sources */,
 			);

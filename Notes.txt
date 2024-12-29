@@ -9,3 +9,4 @@ SwiftUI template doesn't include a Launch Screen. File > New File > Launch Scree
 
 @Binding properties creates a 2 way connection between an existing source of truth and a view that displays and updates the data. This keeps multiple views in sync. 
 
+CTRL + CMD + E for refactor.
