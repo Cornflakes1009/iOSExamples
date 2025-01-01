@@ -24,6 +24,9 @@
 		D95A07252CCE354D008CA300 /* PlaceholderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95A07242CCE354D008CA300 /* PlaceholderVC.swift */; };
 		D99AD2812D2118EA0061FF9B /* TileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD2802D2118EA0061FF9B /* TileVC.swift */; };
 		D99AD2832D2119C60061FF9B /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD2822D2119C60061FF9B /* TileView.swift */; };
+		D99AD2882D23C9C30061FF9B /* RewardTileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD2872D23C9C30061FF9B /* RewardTileVC.swift */; };
+		D99AD28A2D23C9CD0061FF9B /* RewardTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD2892D23C9CD0061FF9B /* RewardTileView.swift */; };
+		D99AD28C2D25151B0061FF9B /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD28B2D25151B0061FF9B /* BalanceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		D95A07242CCE354D008CA300 /* PlaceholderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderVC.swift; sourceTree = "<group>"; };
 		D99AD2802D2118EA0061FF9B /* TileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileVC.swift; sourceTree = "<group>"; };
 		D99AD2822D2119C60061FF9B /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		D99AD2872D23C9C30061FF9B /* RewardTileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardTileVC.swift; sourceTree = "<group>"; };
+		D99AD2892D23C9CD0061FF9B /* RewardTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardTileView.swift; sourceTree = "<group>"; };
+		D99AD28B2D25151B0061FF9B /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,7 @@
 		D953EA002CC47F0A00D617CE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D99AD2862D23C9910061FF9B /* Rewards */,
 				D953E9912CBD82F400D617CE /* HomeVC.swift */,
 				D953EA012CC47F4000D617CE /* HomeHeaderView.swift */,
 				D95A07242CCE354D008CA300 /* PlaceholderVC.swift */,
@@ -165,6 +172,16 @@
 				D99AD2822D2119C60061FF9B /* TileView.swift */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		D99AD2862D23C9910061FF9B /* Rewards */ = {
+			isa = PBXGroup;
+			children = (
+				D99AD2872D23C9C30061FF9B /* RewardTileVC.swift */,
+				D99AD2892D23C9CD0061FF9B /* RewardTileView.swift */,
+				D99AD28B2D25151B0061FF9B /* BalanceView.swift */,
+			);
+			name = Rewards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,10 +320,13 @@
 				D953E9FF2CBF921200D617CE /* Factories.swift in Sources */,
 				D953EA022CC47F4000D617CE /* HomeHeaderView.swift in Sources */,
 				D953E9F72CBF8D8200D617CE /* ScanVC.swift in Sources */,
+				D99AD28C2D25151B0061FF9B /* BalanceView.swift in Sources */,
 				D953E9F52CBF8D4000D617CE /* StarbucksVC.swift in Sources */,
 				D953E98E2CBD82F400D617CE /* AppDelegate.swift in Sources */,
 				D953E9FB2CBF8E1700D617CE /* GiftVC.swift in Sources */,
+				D99AD2882D23C9C30061FF9B /* RewardTileVC.swift in Sources */,
 				D95A07252CCE354D008CA300 /* PlaceholderVC.swift in Sources */,
+				D99AD28A2D23C9CD0061FF9B /* RewardTileView.swift in Sources */,
 				D99AD2832D2119C60061FF9B /* TileView.swift in Sources */,
 				D953E9F92CBF8DD300D617CE /* OrderVC.swift in Sources */,
 			);
