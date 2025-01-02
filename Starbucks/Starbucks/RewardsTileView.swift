@@ -1,5 +1,5 @@
 //
-//  RewardTileView.swift
+//  RewardsTileView.swift
 //  Starbucks
 //
 //  Created by Harold Davidson on 12/30/24.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-class RewardTileView: UIView {
+class RewardsTileView: UIView {
     let balanceView = BalanceView()
     var rewardsButton = UIButton()
-    let rewardsGraphView = UIView()
+    let rewardsGraphView = RewardsGraphView()
     let starRewardsView = UIView()
     var detailsButton = UIButton()
     
@@ -31,14 +31,12 @@ class RewardTileView: UIView {
     
 }
 
-extension RewardTileView {
+extension RewardsTileView {
     func style() {
         rewardsButton.titleLabel?.text = "Rewards options"
         detailsButton.titleLabel?.text = "Details"
         
         makeRewardsOptionButton()
-        
-        rewardsGraphView.backgroundColor = .red
         
         detailsButton = makeClearButton(withText: "Details")
     }
@@ -78,8 +76,7 @@ extension RewardTileView {
             
             rewardsGraphView.topAnchor.constraint(equalToSystemSpacingBelow: balanceView.bottomAnchor, multiplier: 1),
             rewardsGraphView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            //rewardsGraphView.widthAnchor.constraint(equalToConstant: frame.width),
-            rewardsGraphView.heightAnchor.constraint(equalToConstant: 100),
+            rewardsGraphView.widthAnchor.constraint(equalToConstant: frame.width),
             rewardsGraphView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
             trailingAnchor.constraint(equalToSystemSpacingAfter: rewardsGraphView.trailingAnchor, multiplier: 2),
             
@@ -90,5 +87,12 @@ extension RewardTileView {
             detailsButton.leadingAnchor.constraint(equalTo: balanceView.leadingAnchor),
             bottomAnchor.constraint(equalToSystemSpacingBelow: detailsButton.bottomAnchor, multiplier: 2),
         ])
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        rewardsGraphView.actualFrameWidth = frame.width
+        rewardsGraphView.drawRewardsGraph()
     }
 }

@@ -1,5 +1,5 @@
 //
-//  RewardTileVC.swift
+//  RewardsTileVC.swift
 //  Starbucks
 //
 //  Created by Harold Davidson on 12/30/24.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class RewardTileVC: UIViewController {
-    let rewardsTileView = RewardTileView()
+class RewardsTileVC: UIViewController {
+    let rewardsTileView = RewardsTileView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
