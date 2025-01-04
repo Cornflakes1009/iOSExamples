@@ -24,6 +24,7 @@ class HomeHeaderView: UIView {
     }
     
     func style() {
+        backgroundColor = .white
         greetingLbl.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         greetingLbl.text = "Good afternoon, Harold ☀️"
         greetingLbl.textColor = .black
@@ -60,11 +61,11 @@ extension HomeHeaderView {
         let image = UIImage(systemName: "envelope", withConfiguration: configuration)
         
         inboxBtn.setImage(image, for: .normal)
-        inboxBtn.imageView?.tintColor = .secondaryLabel
+        inboxBtn.imageView?.tintColor = .black
         inboxBtn.imageView?.contentMode = .scaleAspectFit
         
         inboxBtn.setTitle("Inbox", for: .normal)
-        inboxBtn.setTitleColor(.secondaryLabel, for: .normal)
+        inboxBtn.setTitleColor(.black, for: .normal)
         
 //        inboxBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 //        inboxBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)

@@ -57,3 +57,11 @@ func makeClearButton(withText text: String) -> UIButton {
     
     return button
 }
+
+// required priority is 1000. This makes it so that it can be broken/flexible if needed.
+public extension NSLayoutConstraint {
+    @objc func setActiveBreakable(priority: UILayoutPriority = UILayoutPriority(900)) {
+        self.priority = priority
+        isActive = true
+    }
+}

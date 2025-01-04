@@ -9,11 +9,18 @@ import UIKit
 
 class HomeVC: StarbucksVC {
 
+    let topSpacerView = UIView()
     let headerView = HomeHeaderView()
     let scrollView = UIScrollView()
     let stackView = UIStackView()
+    let scanButton = UIButton()
     
     var headerViewTopConstraint: NSLayoutConstraint?
+    
+    struct ScanButtonSpacing {
+        static let height: CGFloat = 60
+        static let width: CGFloat = 170
+    }
     
     let cellId = "cellId"
     let tiles = [
@@ -39,7 +46,10 @@ class HomeVC: StarbucksVC {
 //    }
     
     func layout() {
-        let views = [headerView, scrollView]
+        view.backgroundColor = .backgroundWhite
+        topSpacerView.backgroundColor = .white
+        
+        let views = [topSpacerView ,headerView, scrollView, scanButton]
         for view in views {
             view.translatesAutoresizingMaskIntoConstraints = false
             self.view.addSubview(view)
@@ -48,6 +58,14 @@ class HomeVC: StarbucksVC {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 8
+        
+        scanButton.setTitle("Scan in store", for: .normal)
+        scanButton.titleLabel?.minimumScaleFactor = 0.5
+        scanButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title3)
+        scanButton.titleLabel?.adjustsFontForContentSizeCategory = true
+        scanButton.backgroundColor = .lightGreen
+        scanButton.setTitleColor(.white, for: .normal)
+        scanButton.layer.cornerRadius = ScanButtonSpacing.height / 2
         
         scrollView.addSubview(stackView)
         
@@ -60,6 +78,11 @@ class HomeVC: StarbucksVC {
         // constraints
         headerViewTopConstraint = headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
         NSLayoutConstraint.activate([
+            topSpacerView.topAnchor.constraint(equalTo: view.topAnchor),
+            topSpacerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            topSpacerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            topSpacerView.heightAnchor.constraint(equalToConstant: 100),
+            
             headerViewTopConstraint!,
             headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -75,6 +98,12 @@ class HomeVC: StarbucksVC {
             stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor), // this is imperative for scrolling
+            
+            scanButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            scanButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            scanButton.widthAnchor.constraint(equalToConstant: ScanButtonSpacing.width),
+            scanButton.heightAnchor.constraint(equalToConstant: ScanButtonSpacing.height),
+            
         ])
     }
     

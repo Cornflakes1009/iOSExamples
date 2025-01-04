@@ -28,6 +28,9 @@
 		D99AD28A2D23C9CD0061FF9B /* RewardsTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD2892D23C9CD0061FF9B /* RewardsTileView.swift */; };
 		D99AD28C2D25151B0061FF9B /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD28B2D25151B0061FF9B /* BalanceView.swift */; };
 		D99AD28E2D266D0B0061FF9B /* RewardsGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD28D2D266D0B0061FF9B /* RewardsGraphView.swift */; };
+		D99AD2932D2901670061FF9B /* StarAndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD2922D2901670061FF9B /* StarAndPoints.swift */; };
+		D99AD2952D29029B0061FF9B /* StarRewardsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD2942D29029B0061FF9B /* StarRewardsRow.swift */; };
+		D99AD2972D2905750061FF9B /* StarRewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD2962D2905750061FF9B /* StarRewardsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		D99AD2892D23C9CD0061FF9B /* RewardsTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsTileView.swift; sourceTree = "<group>"; };
 		D99AD28B2D25151B0061FF9B /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		D99AD28D2D266D0B0061FF9B /* RewardsGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsGraphView.swift; sourceTree = "<group>"; };
+		D99AD2922D2901670061FF9B /* StarAndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarAndPoints.swift; sourceTree = "<group>"; };
+		D99AD2942D29029B0061FF9B /* StarRewardsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRewardsRow.swift; sourceTree = "<group>"; };
+		D99AD2962D2905750061FF9B /* StarRewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRewardsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 		D953EA002CC47F0A00D617CE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D99AD2912D2901440061FF9B /* StarRewards */,
 				D99AD2862D23C9910061FF9B /* Rewards */,
 				D953E9912CBD82F400D617CE /* HomeVC.swift */,
 				D953EA012CC47F4000D617CE /* HomeHeaderView.swift */,
@@ -185,6 +192,16 @@
 				D99AD28D2D266D0B0061FF9B /* RewardsGraphView.swift */,
 			);
 			name = Rewards;
+			sourceTree = "<group>";
+		};
+		D99AD2912D2901440061FF9B /* StarRewards */ = {
+			isa = PBXGroup;
+			children = (
+				D99AD2922D2901670061FF9B /* StarAndPoints.swift */,
+				D99AD2942D29029B0061FF9B /* StarRewardsRow.swift */,
+				D99AD2962D2905750061FF9B /* StarRewardsView.swift */,
+			);
+			name = StarRewards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,11 +335,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D953E9922CBD82F400D617CE /* HomeVC.swift in Sources */,
+				D99AD2952D29029B0061FF9B /* StarRewardsRow.swift in Sources */,
 				D99AD2812D2118EA0061FF9B /* TileVC.swift in Sources */,
 				D953E9FD2CBF8E9A00D617CE /* StoreVC.swift in Sources */,
 				D953E9FF2CBF921200D617CE /* Factories.swift in Sources */,
 				D953EA022CC47F4000D617CE /* HomeHeaderView.swift in Sources */,
 				D953E9F72CBF8D8200D617CE /* ScanVC.swift in Sources */,
+				D99AD2972D2905750061FF9B /* StarRewardsView.swift in Sources */,
 				D99AD28E2D266D0B0061FF9B /* RewardsGraphView.swift in Sources */,
 				D99AD28C2D25151B0061FF9B /* BalanceView.swift in Sources */,
 				D953E9F52CBF8D4000D617CE /* StarbucksVC.swift in Sources */,
@@ -331,6 +350,7 @@
 				D99AD2882D23C9C30061FF9B /* RewardsTileVC.swift in Sources */,
 				D95A07252CCE354D008CA300 /* PlaceholderVC.swift in Sources */,
 				D99AD28A2D23C9CD0061FF9B /* RewardsTileView.swift in Sources */,
+				D99AD2932D2901670061FF9B /* StarAndPoints.swift in Sources */,
 				D99AD2832D2119C60061FF9B /* TileView.swift in Sources */,
 				D953E9F92CBF8DD300D617CE /* OrderVC.swift in Sources */,
 			);

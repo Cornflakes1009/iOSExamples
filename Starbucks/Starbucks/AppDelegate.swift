@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         tabBarController.tabBar.tintColor = .lightGreen
         tabBarController.tabBar.isTranslucent = false
+        tabBarController.tabBar.backgroundColor = .black
         return true
     }
     
