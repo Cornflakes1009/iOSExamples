@@ -19,7 +19,7 @@ https://www.youtube.com/watch?v=ez4cQWx-q9o&list=PLEVREFF3xBv6B8HTm_ED-8fok5DjQe
 
 
 ## Starbucks
-iOS Project that uses UIKit and is a clone of the Starbucks app. Not completed.
+iOS Project that uses UIKit and is a clone of the Starbucks app. This has some great animations and a somewhat complicated view drawn with Core Graphics. Doesn't play nicely with light/dark mode so may need to switch between the two. CMD + SHIFT + A.
 https://www.youtube.com/watch?v=EyY2ICO2QYk&list=PLEVREFF3xBv4fLwWvXZoY8cKC6F5P-rlY
 
 
@@ -62,12 +62,12 @@ https://www.youtube.com/watch?v=b55npVkqa5U&t=272s
 
 
 ## ScrumDinger
-The first tutorial from Apple's App Dev Tutorials. This contains several projects inside of the repo. This is due to Apple providing starter projects with data to download. Things such as dummy data to populate the previews. 
+The first tutorial from Apple's App Dev Tutorials using SwiftUI. This contains several projects inside of the repo. This is due to Apple providing starter projects with data to download. Things such as dummy data to populate the previews. 
 https://developer.apple.com/tutorials/app-dev-training/getting-started-with-scrumdinger
 
 
 ## NetflixClone
-UIKit project with several UICollectionViews.
+UIKit project with several UICollectionViews. WIP. 
 https://www.youtube.com/watch?v=KCgYDCKqato
 
 

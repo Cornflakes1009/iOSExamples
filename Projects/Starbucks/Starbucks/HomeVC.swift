@@ -49,6 +49,8 @@ class HomeVC: StarbucksVC {
         view.backgroundColor = .backgroundWhite
         topSpacerView.backgroundColor = .white
         
+        headerView.delegate = self
+        
         let views = [topSpacerView ,headerView, scrollView, scanButton]
         for view in views {
             view.translatesAutoresizingMaskIntoConstraints = false
@@ -130,5 +132,12 @@ extension HomeVC: UIScrollViewDelegate {
             self.headerViewTopConstraint?.constant = shouldSnap ? -labelHeight : 0
             self.view.layoutIfNeeded()
         })
+    }
+}
+
+extension HomeVC: HomeHeaderViewDelegate {
+    func didTapHistoryButton(_ sender: HomeHeaderView) {
+        let navController = UINavigationController(rootViewController: HistoryVC())
+        present(navController, animated: true)
     }
 }
