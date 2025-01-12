@@ -48,6 +48,7 @@ struct HomeView: View {
     }
 }
 
+// MARK: - Extension Views
 extension HomeView {
     private var homeHeader: some View {
         HStack {
