@@ -22,6 +22,9 @@
 		D99AD3822D324C270061FF9B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3812D324C270061FF9B /* HomeViewModel.swift */; };
 		D99AD3852D336DDE0061FF9B /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3842D336DDE0061FF9B /* CoinDataService.swift */; };
 		D99AD3882D34DF5A0061FF9B /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3872D34DF5A0061FF9B /* NetworkingManager.swift */; };
+		D99AD38B2D362EDE0061FF9B /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD38A2D362EDE0061FF9B /* CoinImageView.swift */; };
+		D99AD38D2D36304D0061FF9B /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD38C2D36304D0061FF9B /* CoinImageService.swift */; };
+		D99AD3902D36318E0061FF9B /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD38F2D36318E0061FF9B /* CoinImageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		D99AD3812D324C270061FF9B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D99AD3842D336DDE0061FF9B /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		D99AD3872D34DF5A0061FF9B /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		D99AD38A2D362EDE0061FF9B /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
+		D99AD38C2D36304D0061FF9B /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
+		D99AD38F2D36318E0061FF9B /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,7 @@
 		D99AD3722D2E46700061FF9B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D99AD3892D362ED20061FF9B /* CoinImage */,
 				D99AD3732D2E468A0061FF9B /* CircleButton */,
 			);
 			path = Components;
@@ -168,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				D99AD3842D336DDE0061FF9B /* CoinDataService.swift */,
+				D99AD38C2D36304D0061FF9B /* CoinImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,6 +186,15 @@
 				D99AD3872D34DF5A0061FF9B /* NetworkingManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D99AD3892D362ED20061FF9B /* CoinImage */ = {
+			isa = PBXGroup;
+			children = (
+				D99AD38A2D362EDE0061FF9B /* CoinImageView.swift */,
+				D99AD38F2D36318E0061FF9B /* CoinImageViewModel.swift */,
+			);
+			path = CoinImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,13 +272,16 @@
 				D99AD3822D324C270061FF9B /* HomeViewModel.swift in Sources */,
 				D99AD35C2D2CFDFB0061FF9B /* ContentView.swift in Sources */,
 				D99AD3712D2E45980061FF9B /* HomeView.swift in Sources */,
+				D99AD38B2D362EDE0061FF9B /* CoinImageView.swift in Sources */,
 				D99AD35A2D2CFDFB0061FF9B /* CryptoApp.swift in Sources */,
 				D99AD3752D2E46960061FF9B /* CircleButtonView.swift in Sources */,
 				D99AD36B2D2CFEFA0061FF9B /* Color.swift in Sources */,
 				D99AD3882D34DF5A0061FF9B /* NetworkingManager.swift in Sources */,
 				D99AD3772D2E4B2C0061FF9B /* CircleButtonAnimationView.swift in Sources */,
+				D99AD3902D36318E0061FF9B /* CoinImageViewModel.swift in Sources */,
 				D99AD37E2D30E4130061FF9B /* PreviewProvider.swift in Sources */,
 				D99AD3802D30EA210061FF9B /* Double.swift in Sources */,
+				D99AD38D2D36304D0061FF9B /* CoinImageService.swift in Sources */,
 				D99AD37A2D2F69130061FF9B /* CoinModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
