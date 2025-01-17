@@ -17,6 +17,8 @@
 		D99AD3BF2D38DA440061FF9B /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3BE2D38DA440061FF9B /* WeatherManager.swift */; };
 		D99AD3C12D38DB3E0061FF9B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3C02D38DB3E0061FF9B /* SettingsViewController.swift */; };
 		D99AD3C32D38DBA50061FF9B /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3C22D38DBA50061FF9B /* TabViewController.swift */; };
+		D99AD3C52D39FC030061FF9B /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3C42D39FC030061FF9B /* CurrentWeatherView.swift */; };
+		D99AD3C72D39FC2F0061FF9B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3C62D39FC2F0061FF9B /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		D99AD3BE2D38DA440061FF9B /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		D99AD3C02D38DB3E0061FF9B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D99AD3C22D38DBA50061FF9B /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		D99AD3C42D39FC030061FF9B /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
+		D99AD3C62D39FC2F0061FF9B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 		D99AD3B42D38D9BB0061FF9B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D99AD3C42D39FC030061FF9B /* CurrentWeatherView.swift */,
+				D99AD3C62D39FC2F0061FF9B /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,7 +208,9 @@
 				D99AD3C32D38DBA50061FF9B /* TabViewController.swift in Sources */,
 				D99AD3BF2D38DA440061FF9B /* WeatherManager.swift in Sources */,
 				D99AD3BB2D38DA270061FF9B /* LocationManager.swift in Sources */,
+				D99AD3C52D39FC030061FF9B /* CurrentWeatherView.swift in Sources */,
 				D99AD3C12D38DB3E0061FF9B /* SettingsViewController.swift in Sources */,
+				D99AD3C72D39FC2F0061FF9B /* SettingsView.swift in Sources */,
 				D99AD3BD2D38DA300061FF9B /* IAPManager.swift in Sources */,
 				D99AD3A42D38D7830061FF9B /* WeatherViewController.swift in Sources */,
 				D99AD3A02D38D7830061FF9B /* AppDelegate.swift in Sources */,
@@ -354,6 +362,7 @@
 				DEVELOPMENT_TEAM = 464PVQ34ND;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BrightSky/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow location access to see your local weather data.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -382,6 +391,7 @@
 				DEVELOPMENT_TEAM = 464PVQ34ND;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BrightSky/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow location access to see your local weather data.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
