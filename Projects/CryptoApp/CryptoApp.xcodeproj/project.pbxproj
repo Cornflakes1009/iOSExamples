@@ -28,6 +28,9 @@
 		D99AD3CD2D3F56F50061FF9B /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3CC2D3F56F50061FF9B /* LocalFileManager.swift */; };
 		D99AD3CF2D40CAEF0061FF9B /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3CE2D40CAEF0061FF9B /* SearchBarView.swift */; };
 		D99AD3D12D40CEDB0061FF9B /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3D02D40CEDB0061FF9B /* UIApplication.swift */; };
+		D99AD3D32D435C0F0061FF9B /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3D22D435C0F0061FF9B /* StatisticModel.swift */; };
+		D99AD3D52D435D070061FF9B /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3D42D435D070061FF9B /* StatisticView.swift */; };
+		D99AD3D72D4361C60061FF9B /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3D62D4361C60061FF9B /* HomeStatsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		D99AD3CC2D3F56F50061FF9B /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		D99AD3CE2D40CAEF0061FF9B /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		D99AD3D02D40CEDB0061FF9B /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		D99AD3D22D435C0F0061FF9B /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
+		D99AD3D42D435D070061FF9B /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		D99AD3D62D4361C60061FF9B /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				D99AD3702D2E45980061FF9B /* HomeView.swift */,
+				D99AD3D62D4361C60061FF9B /* HomeStatsView.swift */,
 				D99AD37B2D30E3AF0061FF9B /* CoinRowView.swift */,
 			);
 			path = Views;
@@ -158,6 +165,7 @@
 				D99AD3892D362ED20061FF9B /* CoinImage */,
 				D99AD3732D2E468A0061FF9B /* CircleButton */,
 				D99AD3CE2D40CAEF0061FF9B /* SearchBarView.swift */,
+				D99AD3D42D435D070061FF9B /* StatisticView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				D99AD3792D2F69130061FF9B /* CoinModel.swift */,
+				D99AD3D22D435C0F0061FF9B /* StatisticModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -276,12 +285,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D99AD3D32D435C0F0061FF9B /* StatisticModel.swift in Sources */,
 				D99AD3852D336DDE0061FF9B /* CoinDataService.swift in Sources */,
 				D99AD37C2D30E3AF0061FF9B /* CoinRowView.swift in Sources */,
 				D99AD3822D324C270061FF9B /* HomeViewModel.swift in Sources */,
 				D99AD3CD2D3F56F50061FF9B /* LocalFileManager.swift in Sources */,
 				D99AD35C2D2CFDFB0061FF9B /* ContentView.swift in Sources */,
 				D99AD3712D2E45980061FF9B /* HomeView.swift in Sources */,
+				D99AD3D52D435D070061FF9B /* StatisticView.swift in Sources */,
 				D99AD38B2D362EDE0061FF9B /* CoinImageView.swift in Sources */,
 				D99AD35A2D2CFDFB0061FF9B /* CryptoApp.swift in Sources */,
 				D99AD3D12D40CEDB0061FF9B /* UIApplication.swift in Sources */,
@@ -289,6 +300,7 @@
 				D99AD36B2D2CFEFA0061FF9B /* Color.swift in Sources */,
 				D99AD3CF2D40CAEF0061FF9B /* SearchBarView.swift in Sources */,
 				D99AD3882D34DF5A0061FF9B /* NetworkingManager.swift in Sources */,
+				D99AD3D72D4361C60061FF9B /* HomeStatsView.swift in Sources */,
 				D99AD3772D2E4B2C0061FF9B /* CircleButtonAnimationView.swift in Sources */,
 				D99AD3902D36318E0061FF9B /* CoinImageViewModel.swift in Sources */,
 				D99AD37E2D30E4130061FF9B /* PreviewProvider.swift in Sources */,

@@ -10,6 +10,13 @@ import Combine
 
 class HomeViewModel: ObservableObject { // observable object is so that it can be observed from the view
     
+    @Published var statistics: [StatisticModel] = [
+        StatisticModel(title: "Title", value: "Value", percentageChange: 1),
+        StatisticModel(title: "Title", value: "Value", percentageChange: 1),
+        StatisticModel(title: "Title", value: "Value", percentageChange: 1),
+        StatisticModel(title: "Title", value: "Value", percentageChange: -1),
+    ]
+    
     @Published var allCoins: [CoinModel] = []
     @Published var portfolioCoins: [CoinModel] = []
     
@@ -27,7 +34,7 @@ class HomeViewModel: ObservableObject { // observable object is so that it can b
         // this updates allCoins
         $searchText
             .combineLatest(dataService.$allCoins) // if either the search text or allcoins gets changed, this calls
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main) // this waits a half second before running the code below. 
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main) // this waits a half second before running the code below.
             .map(filterCoins)
             .sink { [weak self] (returnedCoins) in
                 self?.allCoins = returnedCoins
