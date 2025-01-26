@@ -25,7 +25,12 @@ class WeatherViewController: UIViewController {
             
             WeatherManager.shared.getWeather(for: location) { [weak self] in
                 DispatchQueue.main.async {
-                    self?.primaryView.reload()
+                    guard let currentWeather = WeatherManager.shared.currentWeather else { return }
+                    self?.primaryView.configure(with: [
+                        .current(viewModel: .init(model: currentWeather)),
+                        .hourly(viewModels: WeatherManager.shared.hourlyWeather.compactMap({ .init(model: $0)})),
+                        .daily(viewModels: WeatherManager.shared.dailyWeather.compactMap({ .init(model: $0)}))
+                    ])
                 }
             }
         }
