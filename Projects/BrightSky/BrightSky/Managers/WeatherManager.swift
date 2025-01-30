@@ -24,9 +24,6 @@ final class WeatherManager {
         Task {
             do {
                 let result = try await service.weather(for: location)
-                print(result.currentWeather)
-                print(result.hourlyForecast)
-                print(result.dailyForecast)
                 self.currentWeather = result.currentWeather
                 self.dailyWeather = result.dailyForecast.forecast
                 self.hourlyWeather = result.hourlyForecast.forecast

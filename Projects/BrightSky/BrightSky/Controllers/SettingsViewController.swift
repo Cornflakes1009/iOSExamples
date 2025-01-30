@@ -37,7 +37,6 @@ class SettingsViewController: UIViewController {
 
 extension SettingsViewController: SettingsViewDelegate {
     func settingsView(_ settingsView: SettingsView, didTap option: SettingOption) {
-        print("Handling...")
         switch option {
         case .upgrade:
             break
