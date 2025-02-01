@@ -59,8 +59,6 @@
 		D99AD3E52D4616230061FF9B /* HourlyWeatherCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		D99AD3E72D46164D0061FF9B /* DailyWeatherCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		D99AD3F02D4B527F0061FF9B /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
-		D99AD3F22D4DFDCD0061FF9B /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
-		D99AD3F42D4DFDF80061FF9B /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; name = StoreKitTestCertificate.cer; path = ../../../../Desktop/StoreKitTestCertificate.cer; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				D99AD3F02D4B527F0061FF9B /* Configuration.storekit */,
-				D99AD3F42D4DFDF80061FF9B /* StoreKitTestCertificate.cer */,
-				D99AD3F22D4DFDCD0061FF9B /* StoreKitTestCertificate.cer */,
 				D99AD39E2D38D7830061FF9B /* BrightSky */,
 				D99AD39D2D38D7830061FF9B /* Products */,
 			);
