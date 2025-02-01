@@ -5,6 +5,9 @@
 //  Created by Harold Davidson on 1/15/25.
 //
 
+import WeatherKit
+import RevenueCat
+import RevenueCatUI
 import UIKit
 
 class WeatherViewController: UIViewController {
@@ -22,7 +25,10 @@ class WeatherViewController: UIViewController {
     }
     
     @objc func didTapUpgrade() {
-        
+        // show paywall
+        let vc = PaywallViewController()
+        vc.delegate = self
+        present(vc, animated: true)
     }
     
     private func getLocation() {
@@ -30,15 +36,37 @@ class WeatherViewController: UIViewController {
             WeatherManager.shared.getWeather(for: location) { [weak self] in
                 DispatchQueue.main.async {
                     guard let currentWeather = WeatherManager.shared.currentWeather else { return }
-                    self?.primaryView.configure(with: [
-                        .current(viewModel: .init(model: currentWeather)),
-                        .hourly(viewModels: WeatherManager.shared.hourlyWeather.compactMap({ .init(model: $0)})),
-                        .daily(viewModels: WeatherManager.shared.dailyWeather.compactMap({ .init(model: $0)}))
-                    ])
+                    self?.createViewModels(currentWeather: currentWeather)
                 }
             }
         }
     }
+    
+    private func createViewModels(currentWeather: CurrentWeather) {
+        var viewModels: [WeatherViewModel] = [
+            .current(viewModel: .init(model: currentWeather)),
+            .hourly(viewModels: WeatherManager.shared.hourlyWeather.compactMap({ .init(model: $0)})),
+        ]
+        primaryView.configure(with: viewModels)
+        
+        IAPManager.shared.isSubscribed { [weak self] subscribed in
+            if subscribed {
+                viewModels.append(.daily(viewModels: WeatherManager.shared.dailyWeather.compactMap({ .init(model: $0)})))
+                
+                DispatchQueue.main.async {
+                    self?.primaryView.configure(with: viewModels)
+                    self?.navigationItem.rightBarButtonItem = nil
+                }
+            } else {
+                DispatchQueue.main.async { [self] in
+                    self?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "crown"), style: .done, target: self, action: #selector(self?.didTapUpgrade))
+                }
+            }
+            
+            
+        }
+    }
+    
     private func setUpView() {
         view.addSubview(primaryView)
         NSLayoutConstraint.activate([
@@ -50,3 +78,17 @@ class WeatherViewController: UIViewController {
     }
 }
 
+extension WeatherViewController: PaywallViewControllerDelegate {
+    
+    func paywallViewController(_ controller: PaywallViewController, didFinishPurchasingWith customerInfo: CustomerInfo) {
+        print("Purchased: ", customerInfo)
+        controller.dismiss(animated: true)
+        guard let currentWeather = WeatherManager.shared.currentWeather else { return }
+        createViewModels(currentWeather: currentWeather)
+    }
+    
+    func paywallViewController(_ controller: PaywallViewController, didFinishRestoringWith customerInfo: CustomerInfo) {
+        print("Restored: ", customerInfo)
+        controller.dismiss(animated: true)
+    }
+}
