@@ -62,8 +62,6 @@ class WeatherViewController: UIViewController {
                     self?.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "crown"), style: .done, target: self, action: #selector(self?.didTapUpgrade))
                 }
             }
-            
-            
         }
     }
     
