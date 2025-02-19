@@ -88,3 +88,6 @@ UIKit with Storyboards xylophone app from an Angela Yu tutorial on Udemy.
 The Calculator app UI using Storyboards
 
 
+## CoreDataToDoList
+UIKit project with simple Core Data usage
+https://www.youtube.com/watch?v=rjHBINtpKA8
