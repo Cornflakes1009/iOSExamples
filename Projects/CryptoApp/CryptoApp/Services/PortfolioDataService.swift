@@ -13,7 +13,7 @@ class PortfolioDataService {
     private let containerName: String = "PortfolioContainer"
     private let entity: String = "PortfolioEntity" // this comes from the entity name in CoreData. Look at PortfolioContainer in Models
     
-    @Published var savedEntities: [PortfolioEntitiy] = []
+    @Published var savedEntities: [PortfolioEntity] = []
     
     init() {
         container = NSPersistentContainer(name: containerName)
@@ -42,7 +42,7 @@ class PortfolioDataService {
     // MARK: - PRIVATE
     
     private func getPortfolio() {
-        let request = NSFetchRequest<PortfolioEntitiy>(entityName: entity)
+        let request = NSFetchRequest<PortfolioEntity>(entityName: entity)
         do {
             savedEntities = try container.viewContext.fetch(request)
         } catch {
@@ -51,18 +51,18 @@ class PortfolioDataService {
     }
     
     private func add(coin: CoinModel, amount: Double) {
-        let entity = PortfolioEntitiy(context: container.viewContext)
+        let entity = PortfolioEntity(context: container.viewContext)
         entity.coinID = coin.id
         entity.amount = amount
         applyChanges()
     }
     
-    private func update(entity: PortfolioEntitiy, amount: Double) {
+    private func update(entity: PortfolioEntity, amount: Double) {
         entity.amount = amount
         applyChanges()
     }
     
-    private func delete(entity: PortfolioEntitiy) {
+    private func delete(entity: PortfolioEntity) {
         container.viewContext.delete(entity)
         applyChanges()
     }
