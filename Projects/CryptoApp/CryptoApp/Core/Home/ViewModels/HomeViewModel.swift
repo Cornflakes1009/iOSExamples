@@ -22,6 +22,10 @@ class HomeViewModel: ObservableObject { // observable object is so that it can b
     private let portfolioDataService = PortfolioDataService()
     private var cancellables = Set<AnyCancellable>()
     
+    enum SortOption {
+        case rank, rankReversed, holdings, holdingsReversed, price, priceReversed
+    }
+    
     init() {
         addSubscribers()
     }
