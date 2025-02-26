@@ -11,11 +11,11 @@ import Combine
 class HomeViewModel: ObservableObject { // observable object is so that it can be observed from the view
     
     @Published var statistics: [StatisticModel] = []
-    
     @Published var allCoins: [CoinModel] = []
     @Published var portfolioCoins: [CoinModel] = []
     @Published var isLoading: Bool = false
     @Published var searchText: String = ""
+    @Published var sortOption: SortOption = .holdings
     
     private let coinDataService = CoinDataService()
     private let marketDataService = MarketDataService()
@@ -34,9 +34,9 @@ class HomeViewModel: ObservableObject { // observable object is so that it can b
         
         // updates allCoins
         $searchText
-            .combineLatest(coinDataService.$allCoins) // if either the search text or allcoins gets changed, this calls
+            .combineLatest(coinDataService.$allCoins, $sortOption) // if either the search text or allcoins gets changed, this calls
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main) // this waits a half second before running the code below.
-            .map(filterCoins)
+            .map(filterAndSortCoins)
             .sink { [weak self] (returnedCoins) in
                 self?.allCoins = returnedCoins
             }
@@ -73,6 +73,12 @@ class HomeViewModel: ObservableObject { // observable object is so that it can b
         HapticManager.notification(type: .success)
     }
     
+    private func filterAndSortCoins(text: String, coins: [CoinModel], sort: SortOption) -> [CoinModel] {
+        var filteredCoins = filterCoins(text: text, coins: coins)
+        // sort
+        return filteredCoins
+    }
+    
     private func filterCoins(text: String, coins: [CoinModel]) -> [CoinModel] {
         guard !text.isEmpty else { return coins } // there's no search text entered
         
@@ -82,6 +88,19 @@ class HomeViewModel: ObservableObject { // observable object is so that it can b
             return coin.name.lowercased().contains(lowercasedText) ||
             coin.symbol.lowercased().contains(lowercasedText) ||
             coin.id.contains(lowercasedText)
+        }
+    }
+    
+    private func sortCoins(sort: SortOption, coins: [CoinModel]) -> [CoinModel] {
+        switch sort {
+        case .rank, .holdings:
+            return coins.sorted(by: { $0.rank < $1.rank})
+        case .rankReversed, .holdingsReversed:
+            return coins.sorted(by: { $0.rank > $1.rank})
+        case .price:
+            return coins.sorted(by: { $0.currentPrice > $1.currentPrice})
+        case .priceReversed:
+            return coins.sorted(by: { $0.currentPrice < $1.currentPrice})
         }
     }
     
