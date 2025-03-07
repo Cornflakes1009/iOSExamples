@@ -40,6 +40,9 @@
 		D99AD46E2D6703D80061FF9B /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD46D2D6703D80061FF9B /* PortfolioDataService.swift */; };
 		D99AD4702D6C3F2D0061FF9B /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD46F2D6C3F2D0061FF9B /* HapticManager.swift */; };
 		D99AD4752D7442CF0061FF9B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD4742D7442CF0061FF9B /* DetailView.swift */; };
+		D99AD4772D7AD17A0061FF9B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD4762D7AD17A0061FF9B /* DetailViewModel.swift */; };
+		D99AD4792D7AD1880061FF9B /* CoinDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD4782D7AD1880061FF9B /* CoinDetailModel.swift */; };
+		D99AD47B2D7AD3390061FF9B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD47A2D7AD3390061FF9B /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,9 @@
 		D99AD46D2D6703D80061FF9B /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
 		D99AD46F2D6C3F2D0061FF9B /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		D99AD4742D7442CF0061FF9B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		D99AD4762D7AD17A0061FF9B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		D99AD4782D7AD1880061FF9B /* CoinDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailModel.swift; sourceTree = "<group>"; };
+		D99AD47A2D7AD3390061FF9B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 				D99AD37D2D30E4130061FF9B /* PreviewProvider.swift */,
 				D99AD37F2D30EA210061FF9B /* Double.swift */,
 				D99AD3D02D40CEDB0061FF9B /* UIApplication.swift */,
+				D99AD47A2D7AD3390061FF9B /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,6 +215,7 @@
 				D99AD3D22D435C0F0061FF9B /* StatisticModel.swift */,
 				D99AD3F62D4F08BB0061FF9B /* MarketDataModel.swift */,
 				D99AD4222D5668140061FF9B /* PortfolioContainer.xcdatamodeld */,
+				D99AD4782D7AD1880061FF9B /* CoinDetailModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,6 +262,7 @@
 		D99AD4722D7442A50061FF9B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D99AD4762D7AD17A0061FF9B /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -343,14 +352,17 @@
 				D99AD3FD2D508EE20061FF9B /* XMarkButton.swift in Sources */,
 				D99AD3822D324C270061FF9B /* HomeViewModel.swift in Sources */,
 				D99AD3CD2D3F56F50061FF9B /* LocalFileManager.swift in Sources */,
+				D99AD4792D7AD1880061FF9B /* CoinDetailModel.swift in Sources */,
 				D99AD35C2D2CFDFB0061FF9B /* ContentView.swift in Sources */,
 				D99AD3F72D4F08BB0061FF9B /* MarketDataModel.swift in Sources */,
 				D99AD3712D2E45980061FF9B /* HomeView.swift in Sources */,
 				D99AD3D52D435D070061FF9B /* StatisticView.swift in Sources */,
 				D99AD38B2D362EDE0061FF9B /* CoinImageView.swift in Sources */,
 				D99AD35A2D2CFDFB0061FF9B /* CryptoApp.swift in Sources */,
+				D99AD47B2D7AD3390061FF9B /* String.swift in Sources */,
 				D99AD3D12D40CEDB0061FF9B /* UIApplication.swift in Sources */,
 				D99AD3752D2E46960061FF9B /* CircleButtonView.swift in Sources */,
+				D99AD4772D7AD17A0061FF9B /* DetailViewModel.swift in Sources */,
 				D99AD36B2D2CFEFA0061FF9B /* Color.swift in Sources */,
 				D99AD4752D7442CF0061FF9B /* DetailView.swift in Sources */,
 				D99AD4702D6C3F2D0061FF9B /* HapticManager.swift in Sources */,
