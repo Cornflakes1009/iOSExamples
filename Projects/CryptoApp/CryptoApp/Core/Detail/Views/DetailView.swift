@@ -47,7 +47,7 @@ struct DetailView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     Divider()
                     
-                    LazyVGrid(columns: columns, alignment: .center, spacing: spacing, content: {
+                    LazyVGrid(columns: columns, alignment: .leading, spacing: spacing, content: {
                         ForEach(0..<6) { _ in
                             StatisticView(stat: StatisticModel(title: "Title", value: "Value"))
                         }
@@ -59,6 +59,11 @@ struct DetailView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     Divider()
                     
+                    LazyVGrid(columns: columns, alignment: .leading, spacing: spacing, content: {
+                        ForEach(0..<6) { _ in
+                            StatisticView(stat: StatisticModel(title: "Title", value: "Value"))
+                        }
+                    })
                 }
                 .padding()
             }
