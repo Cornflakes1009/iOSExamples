@@ -44,6 +44,7 @@
 		D99AD4792D7AD1880061FF9B /* CoinDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD4782D7AD1880061FF9B /* CoinDetailModel.swift */; };
 		D99AD47B2D7AD3390061FF9B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD47A2D7AD3390061FF9B /* String.swift */; };
 		D99AD47D2D7BFB030061FF9B /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD47C2D7BFB030061FF9B /* CoinDetailDataService.swift */; };
+		D99AD47F2D82A25B0061FF9B /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD47E2D82A25B0061FF9B /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		D99AD4782D7AD1880061FF9B /* CoinDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailModel.swift; sourceTree = "<group>"; };
 		D99AD47A2D7AD3390061FF9B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D99AD47C2D7BFB030061FF9B /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
+		D99AD47E2D82A25B0061FF9B /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				D99AD4742D7442CF0061FF9B /* DetailView.swift */,
+				D99AD47E2D82A25B0061FF9B /* ChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				D99AD4702D6C3F2D0061FF9B /* HapticManager.swift in Sources */,
 				D99AD3CF2D40CAEF0061FF9B /* SearchBarView.swift in Sources */,
 				D99AD3882D34DF5A0061FF9B /* NetworkingManager.swift in Sources */,
+				D99AD47F2D82A25B0061FF9B /* ChartView.swift in Sources */,
 				D99AD3FF2D5092330061FF9B /* CoinLogoView.swift in Sources */,
 				D99AD3D72D4361C60061FF9B /* HomeStatsView.swift in Sources */,
 				D99AD3F92D4F3FE30061FF9B /* MarketDataService.swift in Sources */,

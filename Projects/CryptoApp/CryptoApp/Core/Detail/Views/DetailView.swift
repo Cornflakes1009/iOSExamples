@@ -49,6 +49,11 @@ struct DetailView: View {
                 .padding()
             }
             .navigationTitle(vm.coin.name)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    navigationBarTrailingItem
+                }
+            }
         }
     }
 }
@@ -91,5 +96,15 @@ extension DetailView {
                 StatisticView(stat: stat)
             }
         })
+    }
+    
+    private var navigationBarTrailingItem: some View {
+        HStack {
+            Text(vm.coin.symbol.uppercased())
+                .font(.headline)
+                .foregroundStyle(Color.theme.secondaryText)
+            CoinImageView(coin: vm.coin)
+                .frame(width: 25, height: 25)
+        }
     }
 }
