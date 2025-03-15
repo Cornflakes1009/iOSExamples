@@ -16,7 +16,14 @@ struct ChartView: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Path { path in
+            for index in data.indices {
+                let xPosition = UIScreen.main.bounds.width / CGFloat(data.count) * CGFloat(index + 1)
+                
+                
+                
+            }
+        }
     }
 }
 
