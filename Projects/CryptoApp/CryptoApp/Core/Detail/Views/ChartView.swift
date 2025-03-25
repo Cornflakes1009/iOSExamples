@@ -27,6 +27,16 @@ struct ChartView: View {
         VStack {
             chartView
                 .frame(height: 200)
+                .background(chartBackground)
+                .overlay(
+                    VStack {
+                        Text(maxY.formattedWithAbbreviations())
+                        Spacer()
+                        let price = ((maxY + minY) / 2).formattedWithAbbreviations()
+                        Text(price)
+                        Spacer()
+                        Text(minY.formattedWithAbbreviations())
+                    }, alignment: .leading)
         }
     }
 }
@@ -36,6 +46,17 @@ struct ChartView: View {
 }
 
 extension ChartView {
+    
+    private var chartBackground: some View {
+        VStack {
+            Divider()
+            Spacer()
+            Divider()
+            Spacer()
+            Divider()
+        }
+    }
+    
     private var chartView: some View {
         GeometryReader { geometry in
             Path { path in
