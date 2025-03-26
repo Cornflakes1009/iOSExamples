@@ -32,8 +32,7 @@ struct ChartView: View {
                     VStack {
                         Text(maxY.formattedWithAbbreviations())
                         Spacer()
-                        let price = ((maxY + minY) / 2).formattedWithAbbreviations()
-                        Text(price)
+                        Text(((maxY + minY) / 2).formattedWithAbbreviations())
                         Spacer()
                         Text(minY.formattedWithAbbreviations())
                     }, alignment: .leading)
