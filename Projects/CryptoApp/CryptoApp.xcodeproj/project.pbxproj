@@ -45,6 +45,7 @@
 		D99AD47B2D7AD3390061FF9B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD47A2D7AD3390061FF9B /* String.swift */; };
 		D99AD47D2D7BFB030061FF9B /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD47C2D7BFB030061FF9B /* CoinDetailDataService.swift */; };
 		D99AD47F2D82A25B0061FF9B /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD47E2D82A25B0061FF9B /* ChartView.swift */; };
+		D99AD4932D97CA870061FF9B /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD4922D97CA870061FF9B /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		D99AD47A2D7AD3390061FF9B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D99AD47C2D7BFB030061FF9B /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
 		D99AD47E2D82A25B0061FF9B /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		D99AD4922D97CA870061FF9B /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				D99AD37F2D30EA210061FF9B /* Double.swift */,
 				D99AD3D02D40CEDB0061FF9B /* UIApplication.swift */,
 				D99AD47A2D7AD3390061FF9B /* String.swift */,
+				D99AD4922D97CA870061FF9B /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				D99AD3772D2E4B2C0061FF9B /* CircleButtonAnimationView.swift in Sources */,
 				D99AD3902D36318E0061FF9B /* CoinImageViewModel.swift in Sources */,
 				D99AD37E2D30E4130061FF9B /* PreviewProvider.swift in Sources */,
+				D99AD4932D97CA870061FF9B /* Date.swift in Sources */,
 				D99AD3FB2D508B520061FF9B /* PortfolioView.swift in Sources */,
 				D99AD3802D30EA210061FF9B /* Double.swift in Sources */,
 				D99AD38D2D36304D0061FF9B /* CoinImageService.swift in Sources */,

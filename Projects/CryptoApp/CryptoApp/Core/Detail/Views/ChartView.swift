@@ -13,6 +13,8 @@ struct ChartView: View {
     let maxY: Double
     let minY: Double
     let lineColor: Color
+    let startingDate: Date
+    let endingDate: Date
     
     init(coin: CoinModel) {
         data = coin.sparklineIn7D?.price ?? []
@@ -21,6 +23,9 @@ struct ChartView: View {
         
         let priceChange = (data.last ?? 0) - (data.first ?? 0)
         lineColor = priceChange > 0 ? Color.theme.green : Color.theme.red
+        
+        endingDate = Date(coinGencoString: coin.lastUpdated ?? "")
+        startingDate = endingDate.addingTimeInterval(-7*24*60*60) // 7 days, 24 hours, 60 mins, 60 secs.
     }
     
     var body: some View {
@@ -29,6 +34,12 @@ struct ChartView: View {
                 .frame(height: 200)
                 .background(chartBackground)
                 .overlay(chartYAccess, alignment: .leading)
+            
+            HStack {
+                Text("Hi")
+                Spacer()
+                Text("Hi")
+            }
         }
     }
 }
