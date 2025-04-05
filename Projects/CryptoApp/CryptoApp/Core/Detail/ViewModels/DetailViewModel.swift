@@ -12,6 +12,10 @@ class DetailViewModel: ObservableObject {
     
     @Published var overviewStatics: [StatisticModel] = []
     @Published var additionalStatics: [StatisticModel] = []
+    @Published var coinDescription: String? = nil
+    @Published var websiteURL: String? = nil
+    @Published var redditURL: String? = nil
+    
     
     @Published var coin: CoinModel
     private let coinDetailService: CoinDetailDataService
