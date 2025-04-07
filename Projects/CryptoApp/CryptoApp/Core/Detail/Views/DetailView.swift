@@ -42,6 +42,11 @@ struct DetailView: View {
                     VStack(spacing: 20) {
                         overViewTitle
                         Divider()
+                        ZStack {
+                            if let coinDescription = vm.coinDescription, !coinDescription.isEmpty {
+                                Text(coinDescription)
+                            }
+                        }
                         overviewGrid
                         additionalTitle
                         Divider()
