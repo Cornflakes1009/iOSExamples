@@ -11,8 +11,11 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
-                
+                Section(header: Text("Header")) {
+                    
+                }
             }
+            .listStyle(GroupedListStyle())
             .navigationTitle("Settings")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
