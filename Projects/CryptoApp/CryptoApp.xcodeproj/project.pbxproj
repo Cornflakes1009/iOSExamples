@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D962D4062DAA45D0001C7D70 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D962D4052DAA45D0001C7D70 /* SettingsView.swift */; };
 		D962D40B2DAF884E001C7D70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D962D40A2DAF884E001C7D70 /* LaunchScreen.storyboard */; };
+		D962D40D2DB0DBC6001C7D70 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D962D40C2DB0DBC6001C7D70 /* LaunchView.swift */; };
 		D99AD35A2D2CFDFB0061FF9B /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD3592D2CFDFB0061FF9B /* CryptoApp.swift */; };
 		D99AD35C2D2CFDFB0061FF9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99AD35B2D2CFDFB0061FF9B /* ContentView.swift */; };
 		D99AD3612D2CFDFC0061FF9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99AD3602D2CFDFC0061FF9B /* Preview Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		D962D4052DAA45D0001C7D70 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D962D4072DAF8802001C7D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D962D40A2DAF884E001C7D70 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D962D40C2DB0DBC6001C7D70 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		D99AD3562D2CFDFB0061FF9B /* CryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99AD3592D2CFDFB0061FF9B /* CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApp.swift; sourceTree = "<group>"; };
 		D99AD35B2D2CFDFB0061FF9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				D962D40A2DAF884E001C7D70 /* LaunchScreen.storyboard */,
+				D962D40C2DB0DBC6001C7D70 /* LaunchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				D99AD35A2D2CFDFB0061FF9B /* CryptoApp.swift in Sources */,
 				D99AD47B2D7AD3390061FF9B /* String.swift in Sources */,
 				D99AD3D12D40CEDB0061FF9B /* UIApplication.swift in Sources */,
+				D962D40D2DB0DBC6001C7D70 /* LaunchView.swift in Sources */,
 				D99AD3752D2E46960061FF9B /* CircleButtonView.swift in Sources */,
 				D99AD4772D7AD17A0061FF9B /* DetailViewModel.swift in Sources */,
 				D99AD36B2D2CFEFA0061FF9B /* Color.swift in Sources */,

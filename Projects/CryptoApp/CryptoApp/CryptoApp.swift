@@ -19,11 +19,17 @@ struct CryptoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                HomeView()
-                    .toolbar(.hidden)
+            
+            ZStack {
+                NavigationStack {
+                    HomeView()
+                        .toolbar(.hidden)
+                }
+                .environmentObject(vm) // every child of the HomeView also has acces to this vm.
+                
+                LaunchView()
             }
-            .environmentObject(vm) // every child of the HomeView also has acces to this vm.
+            
         }
     }
 }
