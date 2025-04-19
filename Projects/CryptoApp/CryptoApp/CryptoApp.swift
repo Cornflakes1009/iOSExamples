@@ -11,6 +11,7 @@ import SwiftUI
 struct CryptoApp: App {
     
     @StateObject private var vm = HomeViewModel()
+    @State private var showLaunchView: Bool = true
     
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
@@ -27,9 +28,14 @@ struct CryptoApp: App {
                 }
                 .environmentObject(vm) // every child of the HomeView also has acces to this vm.
                 
-                LaunchView()
+                ZStack {
+                    if showLaunchView {
+                        LaunchView(showLaunchView: $showLaunchView)
+                            .transition(.move(edge: .leading))
+                    }
+                }
+                .zIndex(2.0) // to ensure that the zstack is on the top of the screen
             }
-            
         }
     }
 }
