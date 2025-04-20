@@ -23,7 +23,8 @@ class CoinDetailDataService {
         guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/\(coin.id)?localization=false&tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false") else { return }
         
         coinDetailSubscription = NetworkingManager.download(url: url)
-            .decode(type: CoinDetailModel.self, decoder: JSONDecoder())
+            .decode(type: CoinDetailModel.self, decoder: JSONDecoder()) // decoding on background thread
+            .receive(on: DispatchQueue.main) // moving to main thread
             .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] (returnCoinDetails) in
                 self?.coinDetails = returnCoinDetails
                 self?.coinDetailSubscription?.cancel() // cancel the call after it gets data once

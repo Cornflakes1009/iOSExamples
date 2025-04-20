@@ -22,10 +22,11 @@ class NetworkingManager {
         }
     }
     static func download(url: URL) -> AnyPublisher<Data, any Error> {
-        return URLSession.shared.dataTaskPublisher(for: url)
-            .subscribe(on: DispatchQueue.global(qos: .default)) // this is done on a BACKGROUND thread - not the Main thread
+        return URLSession.shared.dataTaskPublisher(for: url) // this is already on a background thread. Don't actually need the next line.
+            //.subscribe(on: DispatchQueue.global(qos: .default)) // this is done on a BACKGROUND thread - not the Main thread
             .tryMap({ try handleURLResponse(output: $0, url: url )})
-            .receive(on: DispatchQueue.main) // return to the main thread
+            //.receive(on: DispatchQueue.main) // return to the main thread - going to handle this on each call instead so decoding happens on the main thread in the service. Looks where this is called to see example. 
+            .retry(3) // if call fails, tries up to 3 times. 
             .eraseToAnyPublisher()
     }
     

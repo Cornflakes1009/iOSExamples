@@ -39,8 +39,9 @@ class CoinImageService {
         
         imageSbscription = NetworkingManager.download(url: url)
             .tryMap({ (data) -> UIImage? in
-                return UIImage(data: data)
+                return UIImage(data: data) // happening on background thread
             })
+            .receive(on: DispatchQueue.main) // moving to main thread
             .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] (returnedImage) in
                 guard let self = self, let downloadedImage = returnedImage else { return }
                 self.image = downloadedImage
