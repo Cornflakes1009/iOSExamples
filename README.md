@@ -14,6 +14,7 @@ https://www.youtube.com/watch?v=NPaFOk-uU68&list=PL5PR3UyfTWvd8uwGRszrhBcC9lS7up
 ## Crypto App
 iOS Project use SwiftUI
 https://www.youtube.com/playlist?list=PLwvDm4Vfkdphbc3bgy_LpLRQ9DDfFGcFu
+This project uses SwiftUI, CoreData, and Combine to creat a crypto tracker. View and save quantities of coins. 
 
 
 ## AirBnb Clone
