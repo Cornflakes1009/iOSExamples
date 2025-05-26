@@ -71,9 +71,16 @@ struct ContentView: View {
     
     func flagTagged(_ number: Int, _ countries: [String]) {
         flagCount += 1
-        if number == correctAnswer {
+        if flagCount == 8 {
+            flagCount = 0
+            scoreTitle = "Your final score is \(score)"
+            showingScore = true
+            
+            
+        } else if number == correctAnswer {
             scoreTitle = "Correct!"
             score += 1
+            
         } else {
             scoreTitle = "Wrong! That's the flag of \(countries[number])"
         }
