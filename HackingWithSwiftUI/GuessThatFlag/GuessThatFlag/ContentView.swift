@@ -75,7 +75,7 @@ struct ContentView: View {
             flagCount = 0
             scoreTitle = "Your final score is \(score)"
             showingScore = true
-            
+            score = 0
             
         } else if number == correctAnswer {
             scoreTitle = "Correct!"
