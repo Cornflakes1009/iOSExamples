@@ -76,3 +76,10 @@ let age = 32
 if case 18...35 = age, age >= 25 {
     print("Cool demographic and can rent a car.")
 }
+var coffeeAmount = 0
+print("^[\(coffeeAmount) cup](inflect: true)")
+coffeeAmount += 1
+print("^[\(coffeeAmount) cup](inflect: true)")
+coffeeAmount -= 2
+print("^[\(coffeeAmount) cup](inflect: true)")
+
