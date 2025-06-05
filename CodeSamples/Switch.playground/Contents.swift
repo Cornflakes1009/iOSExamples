@@ -1,4 +1,5 @@
 import UIKit
+import SwiftUI
 
 // MARK: - Fallthrough and range
 var statusCode = 404
@@ -76,10 +77,12 @@ let age = 32
 if case 18...35 = age, age >= 25 {
     print("Cool demographic and can rent a car.")
 }
-var coffeeAmount = 0
-print("^[\(coffeeAmount) cup](inflect: true)")
-coffeeAmount += 1
-print("^[\(coffeeAmount) cup](inflect: true)")
-coffeeAmount -= 2
-print("^[\(coffeeAmount) cup](inflect: true)")
 
+var coffeeAmount = 0
+print(Text("^[\(coffeeAmount) goose](inflect: true)"))
+coffeeAmount += 1
+print(Text("^[\(coffeeAmount) berry](inflect: true)"))
+coffeeAmount -= 2
+print(Text("^[\(coffeeAmount) cup](inflect: true)"))
+coffeeAmount -= 2
+print(Text("^[\(coffeeAmount) berry](inflect: true)"))

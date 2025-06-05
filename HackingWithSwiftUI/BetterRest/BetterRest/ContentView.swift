@@ -31,12 +31,11 @@ struct ContentView: View {
         //            .labelsHidden() // this hides the label. A screen reader would still read the string value
         NavigationStack {
             Form {
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("When do you want to wake up?")
-                        .font(.headline)
+                Section("When do you want to wake up?", content: {
                     DatePicker("Please enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
                         .labelsHidden()
-                }
+                })
+                .font(.headline)
                 
                 VStack(alignment: .leading, spacing: 0) {
                     Text("Desired amount of sleep")
@@ -45,9 +44,15 @@ struct ContentView: View {
                     Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
                 }
                 VStack(alignment: .leading, spacing: 0) {
-                    Text("Daily coffee intake")
-                        .font(.headline)
-                    Stepper("^[\(coffeeAmount) cup](inflect: true)", value: $coffeeAmount, in: 1...20) // this is magic that changes it from 1 cup to 2 cups with S
+                    Picker("Daily coffee intake", selection: $coffeeAmount) {
+                        ForEach(1...20, id: \.self) { number in
+                            Text("\(number)")
+                        }
+                        
+                    }
+                    //                    Text("Daily coffee intake")
+                    //                        .font(.headline)
+                    //                    Stepper("^[\(coffeeAmount) cup](inflect: true)", value: $coffeeAmount, in: 1...20) // this is magic that changes it from 1 cup to 2 cups with S
                 }
                 
             }
@@ -60,6 +65,7 @@ struct ContentView: View {
             } message: {
                 Text(alertMessage)
             }
+            
         }
         
     }
