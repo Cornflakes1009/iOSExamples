@@ -10,26 +10,43 @@ import SwiftUI
 struct ContentView: View {
     @State private var animationAmount = 1.0
     var body: some View {
-        
+        VStack {
+            Stepper("Scale amount", value: $animationAmount.animation(), in: 1...10)
+            Spacer()
+            Button("Tap Me") {
+                animationAmount += 1
+            }
+            .padding(40)
+            .background(.red)
+            .foregroundStyle(.white)
+            .clipShape(.circle)
+            .scaleEffect(animationAmount)
+//            .animation(.easeOut(duration: 1), value: animationAmount)
+//            .onAppear {
+//                animationAmount = 1
+//            }
+        }
+        // MARK: - Pulse like Radar
         // this does a pulse effect like radar
-        Button("Tap Me") {
-            //animationAmount += 1
-        }
-        .padding(50)
-        .background(.red)
-        .foregroundStyle(.white)
-        .clipShape(.circle)
-        .overlay(
-            Circle()
-                .stroke(.red)
-                .scaleEffect(animationAmount)
-                .opacity(2 - animationAmount)
-                .animation(.easeOut(duration: 1).repeatForever(autoreverses: false), value: animationAmount)
-        )
-        .onAppear {
-            animationAmount = 2
-        }
+//        Button("Tap Me") {
+//            //animationAmount += 1
+//        }
+//        .padding(50)
+//        .background(.red)
+//        .foregroundStyle(.white)
+//        .clipShape(.circle)
+//        .overlay(
+//            Circle()
+//                .stroke(.red)
+//                .scaleEffect(animationAmount)
+//                .opacity(2 - animationAmount)
+//                .animation(.easeOut(duration: 1).repeatForever(autoreverses: false), value: animationAmount)
+//        )
+//        .onAppear {
+//            animationAmount = 2
+//        }
         
+        // MARK: - Bunch of Stuff
 //        Button("Tap Me") {
 //            animationAmount += 1
 //        }
