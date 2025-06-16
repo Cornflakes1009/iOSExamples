@@ -8,24 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var animationAmount = 1.0
+    //@State private var animationAmount = 1.0 // used for everything except the coin effect
+    @State private var animationAmount = 0.0
+    
     var body: some View {
-        VStack {
-            Stepper("Scale amount", value: $animationAmount.animation(), in: 1...10)
-            Spacer()
-            Button("Tap Me") {
-                animationAmount += 1
+        Button("Tap Me") {
+            withAnimation(.spring(duration: 1, bounce: 0.5)) { // makes it spring back around
+                animationAmount += 360
             }
-            .padding(40)
-            .background(.red)
-            .foregroundStyle(.white)
-            .clipShape(.circle)
-            .scaleEffect(animationAmount)
-//            .animation(.easeOut(duration: 1), value: animationAmount)
-//            .onAppear {
-//                animationAmount = 1
-//            }
         }
+        .padding(50)
+        .background(.red)
+        .foregroundStyle(.white)
+        .clipShape(.circle)
+        .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0))
+//        VStack {
+//            Stepper("Scale amount", value: $animationAmount.animation(), in: 1...10)
+//            Spacer()
+//            Button("Tap Me") {
+//                animationAmount += 1
+//            }
+//            .padding(40)
+//            .background(.red)
+//            .foregroundStyle(.white)
+//            .clipShape(.circle)
+//            .scaleEffect(animationAmount)
+////            .animation(.easeOut(duration: 1), value: animationAmount)
+////            .onAppear {
+////                animationAmount = 1
+////            }
+//        }
         // MARK: - Pulse like Radar
         // this does a pulse effect like radar
 //        Button("Tap Me") {
