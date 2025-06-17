@@ -15,7 +15,7 @@ struct ContentView: View {
         
         Button("Tap Me") {
             enabled.toggle()
-        } 
+        }
         .background(enabled ? .blue : .red)
         .foregroundStyle(.white)
         .animation(.default, value: enabled)
