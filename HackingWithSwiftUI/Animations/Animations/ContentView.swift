@@ -10,18 +10,26 @@ import SwiftUI
 struct ContentView: View {
     //@State private var animationAmount = 1.0 // used for everything except the coin effect
     @State private var animationAmount = 0.0
-    
+    @State private var enabled = false
     var body: some View {
+        
         Button("Tap Me") {
-            withAnimation(.spring(duration: 1, bounce: 0.5)) { // makes it spring back around
-                animationAmount += 360
-            }
+            enabled.toggle()
         }
-        .padding(50)
-        .background(.red)
+        .background(enabled ? .blue : .red)
         .foregroundStyle(.white)
-        .clipShape(.circle)
-        .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0))
+        .animation(.default, value: enabled)
+        
+//        Button("Tap Me") {
+//            withAnimation(.spring(duration: 1, bounce: 0.5)) { // makes it spring back around
+//                animationAmount += 360
+//            }
+//        }
+//        .padding(50)
+//        .background(.red)
+//        .foregroundStyle(.white)
+//        .clipShape(.circle)
+//        .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0))
 //        VStack {
 //            Stepper("Scale amount", value: $animationAmount.animation(), in: 1...10)
 //            Spacer()
