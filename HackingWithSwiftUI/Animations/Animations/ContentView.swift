@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var animationAmount = 0.0
     @State private var enabled = false
     var body: some View {
-        
+        // animating box going to circle and red. Corners bounch in and out.
         Button("Tap Me") {
             enabled.toggle()
         }
