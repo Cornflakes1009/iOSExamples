@@ -11,19 +11,58 @@ struct ContentView: View {
     //@State private var animationAmount = 1.0 // used for everything except the coin effect
     @State private var animationAmount = 0.0
     @State private var enabled = false
+    @State private var dragAmount = CGSize.zero
+    let letters = Array("Hello SwiftUI")
     var body: some View {
-        // animating box going to circle and red. Corners bounch in and out.
-        Button("Tap Me") {
-            enabled.toggle()
-        }
-        .frame(width: 200, height: 200)
-        .background(enabled ? .blue : .red)
-        .foregroundStyle(.white)
-        //.animation(.default, value: enabled)
-        .animation(nil, value: enabled)
-        .clipShape(.rect(cornerRadius: enabled ? 60 : 0))
-        .animation(.spring(duration: 1, bounce: 0.9), value: enabled)
         
+        // MARK: - Makes a really cool snake effect
+        HStack(spacing: 0) {
+            ForEach(0..<letters.count, id: \.self) { num in
+                Text(String(letters[num]))
+                    .padding(5)
+                    .font(.title)
+                    .background(enabled ? .blue : .red)
+                    .offset(dragAmount)
+                    .animation(.linear.delay(Double(num) / 20), value: dragAmount)
+            }
+        }
+        .gesture(
+            DragGesture()
+                .onChanged { dragAmount = $0.translation }
+                .onEnded { _ in
+                    dragAmount = .zero
+                    enabled.toggle()
+                }
+        )
+        // MARK: - Drag around box
+//        LinearGradient(colors: [.yellow, .red], startPoint: .topLeading, endPoint: .bottomTrailing)
+//            .frame(width: 300, height: 200)
+//            .clipShape(.rect(cornerRadius: 10))
+//            .offset(dragAmount)
+//            .gesture(
+//                DragGesture()
+//                    .onChanged { dragAmount = $0.translation }
+//                    .onEnded { _ in
+//                        withAnimation(.bouncy) {
+//                            dragAmount = .zero
+//                        }
+//                    }
+//            )
+            //.animation(.bouncy, value: dragAmount)
+        
+        // MARK: - animating box going to circle and red. Corners bounch in and out.
+//        Button("Tap Me") {
+//            enabled.toggle()
+//        }
+//        .frame(width: 200, height: 200)
+//        .background(enabled ? .blue : .red)
+//        .foregroundStyle(.white)
+//        //.animation(.default, value: enabled)
+//        .animation(nil, value: enabled)
+//        .clipShape(.rect(cornerRadius: enabled ? 60 : 0))
+//        .animation(.spring(duration: 1, bounce: 0.9), value: enabled)
+        
+        // MARK: -
 //        Button("Tap Me") {
 //            withAnimation(.spring(duration: 1, bounce: 0.5)) { // makes it spring back around
 //                animationAmount += 360
@@ -34,6 +73,7 @@ struct ContentView: View {
 //        .foregroundStyle(.white)
 //        .clipShape(.circle)
 //        .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0))
+        // MARK: -
 //        VStack {
 //            Stepper("Scale amount", value: $animationAmount.animation(), in: 1...10)
 //            Spacer()
