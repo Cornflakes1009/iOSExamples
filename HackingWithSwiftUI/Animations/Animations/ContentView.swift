@@ -9,31 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     //@State private var animationAmount = 1.0 // used for everything except the coin effect
-    @State private var animationAmount = 0.0
+    @State private var animationAmount = 1.0
     @State private var enabled = false
     @State private var dragAmount = CGSize.zero
     let letters = Array("Hello SwiftUI")
     var body: some View {
         
         // MARK: - Makes a really cool snake effect
-        HStack(spacing: 0) {
-            ForEach(0..<letters.count, id: \.self) { num in
-                Text(String(letters[num]))
-                    .padding(5)
-                    .font(.title)
-                    .background(enabled ? .blue : .red)
-                    .offset(dragAmount)
-                    .animation(.linear.delay(Double(num) / 20), value: dragAmount)
-            }
-        }
-        .gesture(
-            DragGesture()
-                .onChanged { dragAmount = $0.translation }
-                .onEnded { _ in
-                    dragAmount = .zero
-                    enabled.toggle()
-                }
-        )
+//        HStack(spacing: 0) {
+//            ForEach(0..<letters.count, id: \.self) { num in
+//                Text(String(letters[num]))
+//                    .padding(5)
+//                    .font(.title)
+//                    .background(enabled ? .blue : .red)
+//                    .offset(dragAmount)
+//                    .animation(.linear.delay(Double(num) / 20), value: dragAmount)
+//            }
+//        }
+//        .gesture(
+//            DragGesture()
+//                .onChanged { dragAmount = $0.translation }
+//                .onEnded { _ in
+//                    dragAmount = .zero
+//                    enabled.toggle()
+//                }
+//        )
         // MARK: - Drag around box
 //        LinearGradient(colors: [.yellow, .red], startPoint: .topLeading, endPoint: .bottomTrailing)
 //            .frame(width: 300, height: 200)
@@ -48,7 +48,7 @@ struct ContentView: View {
 //                        }
 //                    }
 //            )
-            //.animation(.bouncy, value: dragAmount)
+//            .animation(.bouncy, value: dragAmount)
         
         // MARK: - animating box going to circle and red. Corners bounch in and out.
 //        Button("Tap Me") {
@@ -62,7 +62,7 @@ struct ContentView: View {
 //        .clipShape(.rect(cornerRadius: enabled ? 60 : 0))
 //        .animation(.spring(duration: 1, bounce: 0.9), value: enabled)
         
-        // MARK: -
+        // MARK: - coin rotate with spring to reset
 //        Button("Tap Me") {
 //            withAnimation(.spring(duration: 1, bounce: 0.5)) { // makes it spring back around
 //                animationAmount += 360
@@ -73,7 +73,7 @@ struct ContentView: View {
 //        .foregroundStyle(.white)
 //        .clipShape(.circle)
 //        .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0))
-        // MARK: -
+        // MARK: - circle starts small and grows with taps
 //        VStack {
 //            Stepper("Scale amount", value: $animationAmount.animation(), in: 1...10)
 //            Spacer()
@@ -85,11 +85,13 @@ struct ContentView: View {
 //            .foregroundStyle(.white)
 //            .clipShape(.circle)
 //            .scaleEffect(animationAmount)
-////            .animation(.easeOut(duration: 1), value: animationAmount)
-////            .onAppear {
-////                animationAmount = 1
-////            }
+//            .animation(.easeOut(duration: 1), value: animationAmount)
+//            .onAppear {
+//                animationAmount = 1
+//            }
 //        }
+        
+        
         // MARK: - Pulse like Radar
         // this does a pulse effect like radar
 //        Button("Tap Me") {
@@ -111,28 +113,27 @@ struct ContentView: View {
 //        }
         
         // MARK: - Bunch of Stuff
-//        Button("Tap Me") {
-//            animationAmount += 1
-//        }
-//        .padding(50)
-//        .background(.red)
-//        .foregroundStyle(.white)
-//        .clipShape(.circle)
-//        .scaleEffect(animationAmount)
-//        .blur(radius: (animationAmount - 1) * 3) // this makes it blurry
-        // springy
-        //.animation(.default, value: animationAmount)
-        // constant - use this for movie poster idea
-        //.animation(.linear, value: animationAmount)
-        // bouncy
-        //.animation(.spring(duration: 1, bounce: 0.9), value: animationAmount)
+        Button("Tap Me") {
+            animationAmount += 1
+        }
+        .padding(50)
+        .background(.red)
+        .foregroundStyle(.white)
+        .clipShape(.circle)
+        .scaleEffect(animationAmount) // set to 1 to start
+        .blur(radius: (animationAmount - 1) * 3) // blurry springy
+//        .animation(.default, value: animationAmount)
+         // constant - use this for movie poster idea
+//        .animation(.linear, value: animationAmount)
+         // bouncy
+//        .animation(.spring(duration: 1, bounce: 0.9), value: animationAmount)
         // starts slow, speeds up, and slows down
-        //.animation(.easeInOut(duration: 2), value: animationAmount)
-        // waits one second and then starts slow, speeds up, and slows down
-        //.animation(.easeInOut(duration: 2).delay(1), value: animationAmount)
-        //.animation(.easeInOut(duration: 2).repeatCount(3, autoreverses: true), value: animationAmount)
-        // up > down > up > down ... forever
-        //.animation(.easeInOut(duration: 2).repeatForever(autoreverses: true), value: animationAmount)
+//        .animation(.easeInOut(duration: 2), value: animationAmount)
+         // waits one second and then starts slow, speeds up, and slows down
+//        .animation(.easeInOut(duration: 2).delay(1), value: animationAmount)
+//        .animation(.easeInOut(duration: 2).repeatCount(3, autoreverses: true), value: animationAmount)
+         // up > down > up > down ... forever
+//        .animation(.easeInOut(duration: 2).repeatForever(autoreverses: true), value: animationAmount)
     }
 }
 
