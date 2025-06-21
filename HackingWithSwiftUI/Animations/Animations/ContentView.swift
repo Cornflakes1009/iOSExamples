@@ -13,8 +13,22 @@ struct ContentView: View {
     @State private var enabled = false
     @State private var dragAmount = CGSize.zero
     let letters = Array("Hello SwiftUI")
+    @State private var isShowingRed = false
     var body: some View {
-        
+        VStack {
+            Button("Tap Me") {
+                withAnimation {
+                    isShowingRed.toggle()
+                }
+            }
+            if isShowingRed {
+                Rectangle()
+                    .fill(.red)
+                    .frame(width: 200, height: 200)
+                    //.transition(.scale) // makes it appear from no size to full size
+                    .transition(.asymmetric(insertion: .scale, removal: .opacity))
+            }
+        }
         // MARK: - Makes a really cool snake effect
 //        HStack(spacing: 0) {
 //            ForEach(0..<letters.count, id: \.self) { num in
