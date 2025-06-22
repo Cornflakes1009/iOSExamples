@@ -7,6 +7,24 @@
 
 import SwiftUI
 
+struct CornerRotateModifier: ViewModifier {
+    let amount: Double
+    let anchor: UnitPoint
+    
+    func body(content: Content) -> some View {
+        content
+            .rotationEffect(.degrees(amount), anchor: anchor)
+            .clipped()
+    }
+}
+
+extension AnyTransition {
+    static var pivot: AnyTransition {
+        .modifier(
+            active: CornerRotateModifier(amount: -90, anchor: .topLeading), identity: CornerRotateModifier(amount: 0, anchor: .topLeading)
+        )
+    }
+}
 struct ContentView: View {
     //@State private var animationAmount = 1.0 // used for everything except the coin effect
     @State private var animationAmount = 1.0
@@ -14,21 +32,41 @@ struct ContentView: View {
     @State private var dragAmount = CGSize.zero
     let letters = Array("Hello SwiftUI")
     @State private var isShowingRed = false
+    
     var body: some View {
-        VStack {
-            Button("Tap Me") {
-                withAnimation {
-                    isShowingRed.toggle()
-                }
-            }
+        // does a sort of fan effect where the red comes down with the top left looking like a hinge
+        ZStack {
+            Rectangle()
+                .fill(.blue)
+                .frame(width: 200, height: 200)
+            
             if isShowingRed {
                 Rectangle()
                     .fill(.red)
                     .frame(width: 200, height: 200)
-                    //.transition(.scale) // makes it appear from no size to full size
-                    .transition(.asymmetric(insertion: .scale, removal: .opacity))
+                    .transition(.pivot)
             }
         }
+        .onTapGesture {
+            withAnimation {
+                isShowingRed.toggle()
+            }
+        }
+        // grows and fades out box
+//        VStack {
+//            Button("Tap Me") {
+//                withAnimation {
+//                    isShowingRed.toggle()
+//                }
+//            }
+//            if isShowingRed {
+//                Rectangle()
+//                    .fill(.red)
+//                    .frame(width: 200, height: 200)
+//                    //.transition(.scale) // makes it appear from no size to full size
+//                    .transition(.asymmetric(insertion: .scale, removal: .opacity))
+//            }
+//        }
         // MARK: - Makes a really cool snake effect
 //        HStack(spacing: 0) {
 //            ForEach(0..<letters.count, id: \.self) { num in
