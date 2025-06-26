@@ -1,0 +1,32 @@
+//
+//  ContentView.swift
+//  iExpense
+//
+//  Created by Harold Davidson on 6/25/25.
+//
+
+import SwiftUI
+
+@Observable
+class User {
+    var firstName = "Bilbo"
+    var lastName = "Baggins"
+}
+
+struct ContentView: View {
+    // if a state value is a class instead of a struct, we won't see the change on the screen due to a class having multiple owners. A struct only has one owner.
+    // You can think of this if User was a class, trying to change the values of your instance won't work. Instead it will change the values in the original class. Adding @Observable fixes this.
+    @State private var user = User()
+    var body: some View {
+        VStack {
+            Text("Your name is \(user.firstName) \(user.lastName)")
+            TextField("First name:", text: $user.firstName)
+            TextField("Last name:", text: $user.lastName)
+        }
+        .padding()
+    }
+}
+
+#Preview {
+    ContentView()
+}
