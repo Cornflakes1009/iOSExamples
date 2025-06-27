@@ -5,9 +5,10 @@
 //  Created by Harold Davidson on 6/25/25.
 //
 
+import Observation // this isn't necessary, but it allows you to see what @observable (a macro) is doing. You can right click on and select "expand macro" to see 
 import SwiftUI
 
-@Observable
+@Observable // needed to make a class's changes update the UI
 class User {
     var firstName = "Bilbo"
     var lastName = "Baggins"
