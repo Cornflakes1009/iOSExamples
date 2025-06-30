@@ -29,12 +29,17 @@ struct ContentView: View {
     // You can think of this if User was a class, trying to change the values of your instance won't work. Instead it will change the values in the original class. Adding @Observable fixes this.
     @State private var user = User()
     @State private var showingSheet = false
+    @State private var numbers = [Int]()
+    @State private var currentNumber = 1
     var body: some View {
+        
+        // MARK: - Binding Text Inputs to show values saved in state.
         VStack {
             Text("Your name is \(user.firstName) \(user.lastName)")
             TextField("First name:", text: $user.firstName)
             TextField("Last name:", text: $user.lastName)
             
+            // MARK: - A button that presents a sheet that is a second view
             Button("Show Sheet") {
                 showingSheet.toggle()
             }
@@ -43,6 +48,33 @@ struct ContentView: View {
             }
         }
         .padding()
+        
+        // MARK: - List of numbers with delete and edit functionality
+        NavigationStack {
+            VStack {
+                List {
+                    // needs to be a list so that the onDelete can be attached to the row. Also, not available on List.
+                    ForEach(numbers, id: \.self) {
+                        Text("Row \($0)")
+                    }
+                    .onDelete(perform: removeRows)
+                }
+                
+                Button("Add Number") {
+                    numbers.append(currentNumber)
+                    currentNumber += 1
+                }
+            }
+            .toolbar {
+                EditButton()
+            }
+        }
+        
+    }
+    
+    // allows for swiping to delete row
+    func removeRows(at offsets: IndexSet) {
+        numbers.remove(atOffsets: offsets)
     }
 }
 
