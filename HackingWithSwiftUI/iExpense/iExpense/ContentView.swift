@@ -31,6 +31,9 @@ struct ContentView: View {
     @State private var showingSheet = false
     @State private var numbers = [Int]()
     @State private var currentNumber = 1
+    // sets the initial value if there isn't one. 
+    @AppStorage("tapCount") private var tapCount = 0
+    
     var body: some View {
         
         // MARK: - Binding Text Inputs to show values saved in state.
@@ -68,6 +71,11 @@ struct ContentView: View {
             .toolbar {
                 EditButton()
             }
+        }
+        
+        // MARK: - User Defaults
+        Button("Tap Count: \(tapCount)") {
+            tapCount += 1
         }
         
     }
