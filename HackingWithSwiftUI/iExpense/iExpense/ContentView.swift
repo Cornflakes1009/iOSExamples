@@ -31,7 +31,7 @@ struct ContentView: View {
     @State private var showingSheet = false
     @State private var numbers = [Int]()
     @State private var currentNumber = 1
-    // sets the initial value if there isn't one. 
+    // sets the initial value if there isn't one.
     @AppStorage("tapCount") private var tapCount = 0
     
     var body: some View {
