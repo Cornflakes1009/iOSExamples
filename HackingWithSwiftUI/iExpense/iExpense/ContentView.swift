@@ -14,6 +14,11 @@ class User {
     var lastName = "Baggins"
 }
 
+struct User2: Codable {
+    let firstName: String
+    let lastName: String
+}
+
 struct SecondView: View {
     @Environment(\.dismiss) var dismiss // @Environment is a property wrapper
     let name: String
