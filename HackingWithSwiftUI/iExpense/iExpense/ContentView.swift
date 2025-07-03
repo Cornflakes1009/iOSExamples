@@ -39,6 +39,7 @@ struct ContentView: View {
     // sets the initial value if there isn't one.
     @AppStorage("tapCount") private var tapCount = 0
     
+    @State private var user2 = User2(firstName: "Harold", lastName: "Davidson")
     var body: some View {
         
         // MARK: - Binding Text Inputs to show values saved in state.
@@ -81,6 +82,15 @@ struct ContentView: View {
         // MARK: - User Defaults
         Button("Tap Count: \(tapCount)") {
             tapCount += 1
+        }
+        
+        // MARK: -
+        Button("Save User") {
+            let encoder = JSONEncoder()
+            
+            if let data = try? encoder.encode(user2) {
+                UserDefaults.standard.set(data, forKey: "UserData")
+            }
         }
         
     }
