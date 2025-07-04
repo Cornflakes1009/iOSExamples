@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		D97DD6B52E176FBE00AF32ED /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D97DD69E2E0D24E700AF32ED /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		D97DD6B72E176FBE00AF32ED /* iExpense */ = {
+		D97DD6A02E0D24E700AF32ED /* iExpense */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = iExpense;
 			sourceTree = "<group>";
@@ -19,7 +19,7 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D97DD6B22E176FBE00AF32ED /* Frameworks */ = {
+		D97DD69B2E0D24E700AF32ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D97DD6AC2E176FBE00AF32ED = {
+		D97DD6952E0D24E700AF32ED = {
 			isa = PBXGroup;
 			children = (
-				D97DD6B72E176FBE00AF32ED /* iExpense */,
-				D97DD6B62E176FBE00AF32ED /* Products */,
+				D97DD6A02E0D24E700AF32ED /* iExpense */,
+				D97DD69F2E0D24E700AF32ED /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D97DD6B62E176FBE00AF32ED /* Products */ = {
+		D97DD69F2E0D24E700AF32ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D97DD6B52E176FBE00AF32ED /* iExpense.app */,
+				D97DD69E2E0D24E700AF32ED /* iExpense.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D97DD6B42E176FBE00AF32ED /* iExpense */ = {
+		D97DD69D2E0D24E700AF32ED /* iExpense */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D97DD6C02E176FC000AF32ED /* Build configuration list for PBXNativeTarget "iExpense" */;
+			buildConfigurationList = D97DD6A92E0D24E800AF32ED /* Build configuration list for PBXNativeTarget "iExpense" */;
 			buildPhases = (
-				D97DD6B12E176FBE00AF32ED /* Sources */,
-				D97DD6B22E176FBE00AF32ED /* Frameworks */,
-				D97DD6B32E176FBE00AF32ED /* Resources */,
+				D97DD69A2E0D24E700AF32ED /* Sources */,
+				D97DD69B2E0D24E700AF32ED /* Frameworks */,
+				D97DD69C2E0D24E700AF32ED /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				D97DD6B72E176FBE00AF32ED /* iExpense */,
+				D97DD6A02E0D24E700AF32ED /* iExpense */,
 			);
 			name = iExpense;
 			packageProductDependencies = (
 			);
 			productName = iExpense;
-			productReference = D97DD6B52E176FBE00AF32ED /* iExpense.app */;
+			productReference = D97DD69E2E0D24E700AF32ED /* iExpense.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D97DD6AD2E176FBE00AF32ED /* Project object */ = {
+		D97DD6962E0D24E700AF32ED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
-					D97DD6B42E176FBE00AF32ED = {
+					D97DD69D2E0D24E700AF32ED = {
 						CreatedOnToolsVersion = 16.3;
 					};
 				};
 			};
-			buildConfigurationList = D97DD6B02E176FBE00AF32ED /* Build configuration list for PBXProject "iExpense" */;
+			buildConfigurationList = D97DD6992E0D24E700AF32ED /* Build configuration list for PBXProject "iExpense" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = D97DD6AC2E176FBE00AF32ED;
+			mainGroup = D97DD6952E0D24E700AF32ED;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = D97DD6B62E176FBE00AF32ED /* Products */;
+			productRefGroup = D97DD69F2E0D24E700AF32ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D97DD6B42E176FBE00AF32ED /* iExpense */,
+				D97DD69D2E0D24E700AF32ED /* iExpense */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D97DD6B32E176FBE00AF32ED /* Resources */ = {
+		D97DD69C2E0D24E700AF32ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D97DD6B12E176FBE00AF32ED /* Sources */ = {
+		D97DD69A2E0D24E700AF32ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		D97DD6BE2E176FC000AF32ED /* Debug */ = {
+		D97DD6A72E0D24E800AF32ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -160,7 +160,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 464PVQ34ND;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -189,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		D97DD6BF2E176FC000AF32ED /* Release */ = {
+		D97DD6A82E0D24E800AF32ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -224,7 +223,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 464PVQ34ND;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -246,14 +244,13 @@
 			};
 			name = Release;
 		};
-		D97DD6C12E176FC000AF32ED /* Debug */ = {
+		D97DD6AA2E0D24E800AF32ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 464PVQ34ND;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -274,14 +271,13 @@
 			};
 			name = Debug;
 		};
-		D97DD6C22E176FC000AF32ED /* Release */ = {
+		D97DD6AB2E0D24E800AF32ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 464PVQ34ND;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -305,25 +301,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D97DD6B02E176FBE00AF32ED /* Build configuration list for PBXProject "iExpense" */ = {
+		D97DD6992E0D24E700AF32ED /* Build configuration list for PBXProject "iExpense" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D97DD6BE2E176FC000AF32ED /* Debug */,
-				D97DD6BF2E176FC000AF32ED /* Release */,
+				D97DD6A72E0D24E800AF32ED /* Debug */,
+				D97DD6A82E0D24E800AF32ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D97DD6C02E176FC000AF32ED /* Build configuration list for PBXNativeTarget "iExpense" */ = {
+		D97DD6A92E0D24E800AF32ED /* Build configuration list for PBXNativeTarget "iExpense" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D97DD6C12E176FC000AF32ED /* Debug */,
-				D97DD6C22E176FC000AF32ED /* Release */,
+				D97DD6AA2E0D24E800AF32ED /* Debug */,
+				D97DD6AB2E0D24E800AF32ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D97DD6AD2E176FBE00AF32ED /* Project object */;
+	rootObject = D97DD6962E0D24E700AF32ED /* Project object */;
 }
