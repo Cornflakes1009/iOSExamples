@@ -25,6 +25,7 @@ class Expenses {
 
 struct ContentView: View {
     @State private var expenses = Expenses()
+    @State private var showingAddExpense = false
     
     var body: some View {
         NavigationStack {
@@ -38,9 +39,11 @@ struct ContentView: View {
             .toolbar {
                 // "Add Expense" is for voiceover. Doesn't actually show on screen
                 Button("Add Expense", systemImage: "plus") {
-                    let expense = ExpenseItem(name: "Test", type: "Groceries", amount: 100.0)
-                    expenses.items.append(expense)
+                    showingAddExpense = true
                 }
+            }
+            .sheet(isPresented: $showingAddExpense) {
+                AddView(expenses: expenses)
             }
         }
     }
