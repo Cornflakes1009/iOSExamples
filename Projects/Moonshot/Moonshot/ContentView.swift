@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        Image(.example) // this is done from Xcode/Swift. The image name is actually "Example.jpg"
+            .resizable()
+            .scaledToFit()
+            //.frame(width: 300, height: 300)
+        // setting the frame for the image to be presented in 80% of the screen width (.horizonal). 
+            .containerRelativeFrame(.horizontal) { size, axis in
+                size * 0.8
+            }
     }
 }
 
