@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+struct User: Codable {
+    let name: String
+    let address: Address
+}
+
+struct Address: Codable {
+    let street: String
+    let city: String
+}
+
 struct CustomText: View {
     let text: String
     
@@ -29,11 +39,22 @@ struct ContentView: View {
                 {
                     "name": "Taylor Swift",
                     "address": {
-                        "street": "555, Taylor Swift Avenue,"
+                        "street": "555, Taylor Swift Avenue",
                         "city": "Nashville"
                     }
                 }
                 """
+            
+            let data = Data(input.utf8)
+            let decoder = JSONDecoder()
+            
+            
+            if let user = try? decoder.decode(User.self, from: data) {
+                print("Name: \(user.name)")
+                print("Street: \(user.address.street)")
+                print("City: \(user.address.city)")
+            }
+                
         }
         NavigationStack {
             
