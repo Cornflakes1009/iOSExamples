@@ -33,6 +33,12 @@ struct CustomText: View {
 
 
 struct ContentView: View {
+    let layout = [
+        GridItem(.adaptive(minimum: 80)),
+        GridItem(.fixed(80)),
+        GridItem(.fixed(80)),
+    ]
+    
     var body: some View {
         Button("Decode JSON") {
             let input = """
@@ -56,6 +62,23 @@ struct ContentView: View {
             }
                 
         }
+        
+        // Vertical
+        ScrollView {
+            LazyVGrid(columns: layout) {
+                ForEach(0..<1000) {
+                    Text("Item \($0)")
+                }
+            }
+        }
+        // Horizontal
+        ScrollView(.horizontal) {
+            LazyHGrid(rows: layout) {
+                ForEach(0..<1000) {
+                    Text("Item \($0)")
+                }
+            }
+        }
         NavigationStack {
             
             
@@ -69,12 +92,12 @@ struct ContentView: View {
             //            }
             
 //            ScrollView(.vertical) {
-                List(0..<100) { row in
-                    NavigationLink("Row \(row)") {
-                        Text("Details for Row \(row)")
-                    }
-                }
-                .navigationTitle("SwiftUI")
+//                List(0..<100) { row in
+//                    NavigationLink("Row \(row)") {
+//                        Text("Details for Row \(row)")
+//                    }
+//                }
+//                .navigationTitle("SwiftUI")
                 // LazyVStack only builds items as needed
 //                LazyVStack(spacing: 10) {
 //                    ForEach(0..<100) {
