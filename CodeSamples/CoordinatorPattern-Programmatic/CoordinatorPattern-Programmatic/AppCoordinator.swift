@@ -27,5 +27,10 @@ class AppCoordinator: Coordinator {
         let detailVC = DetailViewController()
         navigationController.pushViewController(detailVC, animated: true)
     }
+    
+    func showSettings() {
+        let settingsVC = SettingsViewController()
+        navigationController.pushViewController(settingsVC, animated: true)
+    }
 }
 
