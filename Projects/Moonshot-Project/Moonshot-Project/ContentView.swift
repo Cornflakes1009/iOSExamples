@@ -22,10 +22,25 @@ struct ContentView: View {
                     ForEach(missions) { mission in
                         NavigationLink {
                             Text("Detail")
+                        } label: {
+                            VStack {
+                                Image(mission.image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                
+                                VStack {
+                                    Text(mission.launchDate ?? "N/A")
+                                        .font(.caption)
+                                    
+                                }
+                                .frame(maxWidth: .infinity)
+                            }
                         }
                     }
                 }
             }
+            .navigationTitle("Moonshot")
         }
     }
 }
