@@ -18,6 +18,10 @@ extension Bundle {
         }
         
         let decoder = JSONDecoder()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "y-MM-dd"
+        decoder.dateDecodingStrategy = .formatted(formatter) // telling decoder to decode dates like 03-28-1989
+        
         do {
             return try decoder.decode(T.self, from: data)
         } catch DecodingError.keyNotFound(let key, let context) {

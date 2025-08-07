@@ -30,11 +30,15 @@ struct ContentView: View {
                                     .frame(width: 100, height: 100)
                                 
                                 VStack {
-                                    Text(mission.launchDate ?? "N/A")
+                                    Text(mission.displayName)
+                                        .font(.headline)
+                                    Text(mission.formattededLaunchDate)
                                         .font(.caption)
                                     
                                 }
+                                .padding(.vertical)
                                 .frame(maxWidth: .infinity)
+                                .background(.lightBackground)
                             }
                         }
                     }
