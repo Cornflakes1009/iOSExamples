@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D939B4F12E4C636300600C41 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D939B4F02E4C636300600C41 /* MissionView.swift */; };
 		D9452E6B2E4484FB006317A8 /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9452E6A2E4484FB006317A8 /* Color-Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D939B4F02E4C636300600C41 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		D9452E522E375198006317A8 /* Moonshot-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moonshot-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9452E6A2E4484FB006317A8 /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,6 +39,7 @@
 		D9452E492E375198006317A8 = {
 			isa = PBXGroup;
 			children = (
+				D939B4F02E4C636300600C41 /* MissionView.swift */,
 				D9452E6A2E4484FB006317A8 /* Color-Theme.swift */,
 				D9452E542E375198006317A8 /* Moonshot-Project */,
 				D9452E532E375198006317A8 /* Products */,
@@ -125,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D939B4F12E4C636300600C41 /* MissionView.swift in Sources */,
 				D9452E6B2E4484FB006317A8 /* Color-Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
