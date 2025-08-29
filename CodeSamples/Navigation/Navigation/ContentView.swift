@@ -23,11 +23,13 @@ struct DetailView: View {
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            NavigationLink("Tap Me") {
-                // problem with this approach is that it instantiates the view before it's needed
-                //DetailView(number: 556)
-                
-                
+            // problem with this approach is that it instantiates the view before it's needed
+//            NavigationLink("Tap Me") {
+//                DetailView(number: 556)
+//            }
+            
+            List(0..<100) { i in
+                NavigationLink("Select \(i)", value: i)
             }
         }
     }
