@@ -9,22 +9,29 @@ import SwiftUI
 
 struct DetailView: View {
     var number: Int
-    
+    @Binding var path3: NavigationPath // binding allows you to pass the property to a different view and modify it
     var body: some View {
-        Text("Detail View \(number)")
+        NavigationLink("Go to Random Number", value: Int.random(in: 1...10))
+            .navigationTitle("Number: \(number)")
+            .toolbar {
+                Button("Home") {
+                    path3 = NavigationPath()
+                }
+            }
     }
     
-    init(number: Int) {
-        self.number = number
-        print("Creating detail view with \(number)")
-    }
+//    init(number: Int) {
+//        self.number = number
+//        print("Creating detail view with \(number)")
+//    }
 }
 
 struct ContentView: View {
     
     @State private var path = [Int]()
+    @State private var path2 = NavigationPath()
+    @State private var path3 = NavigationPath()
     
-    @State private var path2 = NavigationPath() // used for programmatic navigation
     var body: some View {
 //        NavigationStack {
 //            // problem with this approach is that it instantiates the view before it's needed
@@ -63,36 +70,43 @@ struct ContentView: View {
 //        }
         
         // Navigating using different data types
-        // what's interesting about this is that the two items inside the toolbar still push to the new view and use the string or int navigationDestination based solely on their type. 
-        NavigationStack(path: $path2) {
-            List {
-                ForEach(0..<5) { i in
-                    NavigationLink("Select Number: \(i)", value: i)
+        // what's interesting about this is that the two items inside the toolbar still push to the new view and use the string or int navigationDestination based solely on their type.
+//        NavigationStack(path: $path2) {
+//            List {
+//                ForEach(0..<5) { i in
+//                    NavigationLink("Select Number: \(i)", value: i)
+//                }
+//                
+//                ForEach(0..<5) { i in
+//                    NavigationLink("Select String: \(i)", value: String(i))
+//                }
+//            }
+//            .toolbar {
+//                Button("Push 556") {
+//                    path2.append(556)
+//                }
+//                
+//                Button("Push Hello") {
+//                    path2.append("Hello")
+//                }
+//            }
+//            .navigationDestination(for: Int.self) { selection in
+//                Text("You selected the number \(selection)")
+//            }
+//            .navigationDestination(for: String.self) { selection in
+//                Text("You selected the string \(selection)")
+//            }
+//        }
+        
+        NavigationStack(path: $path3) {
+            DetailView(number: 0, path3: $path3)
+                .navigationDestination(for: Int.self) { i in
+                    DetailView(number: i, path3: $path3)
                 }
-                
-                ForEach(0..<5) { i in
-                    NavigationLink("Select String: \(i)", value: String(i))
-                }
-            }
-            .toolbar {
-                Button("Push 556") {
-                    path2.append(556)
-                }
-                
-                Button("Push Hello") {
-                    path2.append("Hello")
-                }
-            }
-            .navigationDestination(for: Int.self) { selection in
-                Text("You selected the number \(selection)")
-            }
-            .navigationDestination(for: String.self) { selection in
-                Text("You selected the string \(selection)")
-            }
         }
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
