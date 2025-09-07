@@ -7,6 +7,37 @@
 
 import SwiftUI
 
+@Observable
+class PathStore {
+    var path: NavigationPath {
+        didSet {
+            save()
+        }
+    }
+    
+    private let savePath = URL.documentsDirectory.appending(path: "SavedPath")
+    
+    init() {
+        if let data = try? Data(contentsOf: savePath) {
+            if let decoded = try? JSONDecoder().decode(NavigationPath.CodableRepresentation.self, from: data) {
+                self.path = NavigationPath(decoded)
+                return
+            }
+        }
+        self.path = NavigationPath()
+    }
+    
+    func save() {
+        guard let representation = path.codable else { return }
+        do {
+            let data = try JSONEncoder().encode(representation)
+            try data.write(to: savePath)
+        } catch {
+            print("Failed to save navigation data")
+        }
+    }
+}
+
 struct DetailView: View {
     var number: Int
     @Binding var path3: NavigationPath // binding allows you to pass the property to a different view and modify it
@@ -31,6 +62,7 @@ struct ContentView: View {
     @State private var path = [Int]()
     @State private var path2 = NavigationPath()
     @State private var path3 = NavigationPath()
+    @State private var pathStore = PathStore()
     
     var body: some View {
 //        NavigationStack {
@@ -98,10 +130,17 @@ struct ContentView: View {
 //            }
 //        }
         
-        NavigationStack(path: $path3) {
-            DetailView(number: 0, path3: $path3)
+//        NavigationStack(path: $path3) {
+//            DetailView(number: 0, path3: $path3)
+//                .navigationDestination(for: Int.self) { i in
+//                    DetailView(number: i, path3: $path3)
+//                }
+//        }
+        
+        NavigationStack(path: $pathStore.path) {
+            DetailView(number: 0, path3: $pathStore.path)
                 .navigationDestination(for: Int.self) { i in
-                    DetailView(number: i, path3: $path3)
+                    DetailView(number: i, path3: $pathStore.path)
                 }
         }
     }
