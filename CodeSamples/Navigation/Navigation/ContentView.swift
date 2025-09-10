@@ -143,6 +143,17 @@ struct ContentView: View {
                     DetailView(number: i, path3: $pathStore.path)
                 }
         }
+        
+        NavigationStack {
+            List(0..<100) { i in
+                Text("Row \(i)")
+            }
+            .navigationTitle("Title goes here")
+            .navigationBarTitleDisplayMode(.inline) // this puts a little bar at the top that's only visible when you scroll the content.
+            .toolbarBackground(.blue) // snaps in a blue background as scrolling
+            .toolbarColorScheme(.dark) // always use dark colors (white text)
+            .toolbar(.hidden, for: .navigationBar) // this hides the bar and still allows navigation
+        }
     }
 }
 
