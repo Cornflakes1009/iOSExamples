@@ -15,13 +15,44 @@ struct ContentView: View {
     @State private var stepVal = 0
     @State private var gameTime = Date()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Form {
+            Section {
+                Picker("Transit Modes", selection: $choice) {
+                    ForEach(0..<transitModes.count, id: \.self) { index in
+                            Text(self.transitModes[index])
+                            .pickerStyle(.segmented)
+                            Text("Current Choice \(transitModes[choice])")
+                    }
+                }
+            }
+            
+            Section {
+                Toggle(isOn: $showText) {
+                    Text("Show Text")
+                }
+                if showText {
+                    Text("Teh Text toggle is on")
+                }
+            }
+            
+            Section {
+                Slider(value: $sliderVal, in: 0...10, step: 0.001)
+                Text("Slider current value \(sliderVal, specifier: "%.1f")")
+            }
+            
+            Section {
+                Stepper("Stepper", value: $stepVal, in: 0...5)
+                Text("Stepper current value \(stepVal)")
+            }
+            
+            Section {
+                DatePicker("Please select a date", selection: $gameTime)
+            }
+            
+            Section {
+                DatePicker("Please select a date", selection: $gameTime, in: Date()...)
+            }
         }
-        .padding()
     }
 }
 
