@@ -29,6 +29,16 @@ struct ContentView: View {
                 Image(systemName: "k.circle.fill")
                     .accessibility(identifier: "Letter K")
             }
+            
+            HStack {
+                Image(systemName: "allergens")
+                Image(systemName: "ladybug")
+            }
+            .symbolVariant(.fill)
+            .symbolRenderingMode(.multicolor)
+            .font(.largeTitle)
+            
+            
         }
         .padding()
     }
