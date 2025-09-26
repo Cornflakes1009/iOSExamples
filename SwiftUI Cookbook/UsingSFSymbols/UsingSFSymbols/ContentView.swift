@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var wifiSelection = 0
+    
     var body: some View {
         VStack {
             HStack {
@@ -38,7 +40,32 @@ struct ContentView: View {
             .symbolRenderingMode(.multicolor)
             .font(.largeTitle)
             
-            
+            HStack {
+                Picker("Pick One", selection: $wifiSelection) {
+                    Text("No Wifi").tag(0)
+                    Text("Searching").tag(1)
+                    Text("Wifi On").tag(2)
+                }
+                .pickerStyle(.segmented)
+                .frame(width: 240)
+                .padding(.horizontal)
+                
+                Group {
+                    switch wifiSelection {
+                    case 0:
+                        Image(systemName: "wifi")
+                            .symbolVariant(.slash)
+                    case 1:
+                        Image(systemName: "wifi")
+                            .symbolEffect(.variableColor.iterative.reversing)
+                    default:
+                        Text("No Wifi")
+                            .foregroundStyle(.blue)
+                    }
+                }
+            }
+            .foregroundStyle(.secondary)
+            .font(.title)
         }
         .padding()
     }
