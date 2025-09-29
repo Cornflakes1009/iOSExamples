@@ -10,29 +10,15 @@ import SwiftUI
 struct ActivityIndicator: UIViewRepresentable {
     var animating: Bool
     
-    func makeUIView(context: Context) -> some UIView {
-        UIActivityIndicatorView {
-            return UIActivityIndicatorView()
-        }
+    func makeUIView(context: Context) -> UIActivityIndicatorView {
+        return UIActivityIndicatorView()
     }
     
-    func updateUIView(_ uiView: UIView, context: Context) {
+    func updateUIView(_ activityIndicator: UIActivityIndicatorView, context: Context) {
         if animating {
             activityIndicator.startAnimating()
         }
     }
 }
 
-struct ContentView: View {
-    @State private var animate = true
-    var body: some View {
-        VStack {
-            ActivityIndicator(animating: animate)
-            HStack {
-                Toggle(isOn: $animate) {
-                    Text("Toggle Animation")
-                }
-            }.padding()
-        }
-    }
-}
+
