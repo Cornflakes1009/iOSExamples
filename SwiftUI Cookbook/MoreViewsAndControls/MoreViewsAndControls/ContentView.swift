@@ -24,6 +24,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .listStyle(.grouped)
             
             Section(header: Text("Labels")) {
                 Label("Slow", systemImage: "tortoise.fill")
@@ -57,7 +58,29 @@ struct ContentView: View {
             }
         }
         
-        //stopped on page 46 step 7
+        Section(header: Text("Menu")) {
+            Menu("Actions") {
+                Button("Set TextEditor text to 'magic'") {
+                    someText = "magic"
+                }
+                
+                Button("Turn first picker green.") {
+                    color = Color.green
+                }
+                
+                Menu("Actions") {
+                    Button("Set TextEditor text to 'real magic'") {
+                        someText = "real magic"
+                    }
+                    
+                    Button("Turn first picker green.") {
+                        color = Color.gray
+                    }
+                }
+                
+                
+            }
+        }
     }
 }
 
