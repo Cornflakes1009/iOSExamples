@@ -7,27 +7,26 @@
 
 import XCTest
 
-final class TipCalculatorUITestsLaunchTests: XCTestCase {
+final class when_content_view_is_shown: XCTestCase {
 
-    override class var runsForEachTargetApplicationUIConfiguration: Bool {
-        true
-    }
-
-    override func setUpWithError() throws {
-        continueAfterFailure = false
-    }
-
-    @MainActor
-    func testLaunch() throws {
+    func test_should_make_sure_that_the_total_text_field_contains_default_value() {
         let app = XCUIApplication()
+        continueAfterFailure = false
         app.launch()
-
-        // Insert steps here to perform after app launch but before taking a screenshot,
-        // such as logging into a test account or navigating somewhere in the app
-
-        let attachment = XCTAttachment(screenshot: app.screenshot())
-        attachment.name = "Launch Screen"
-        attachment.lifetime = .keepAlways
-        add(attachment)
+        
+        let totalTextField = app.textFields["totalTextField"] // set in ContentView in accessibilityIdentifier
+        XCTAssertEqual(totalTextField.value as? String, "Enter total")
+    }
+    
+    func test_should_make_sure_the_20_percent_default_tip_option_is_selected() {
+        let app = XCUIApplication()
+        continueAfterFailure = false
+        app.launch()
+        
+        let tipPercentageSegmentedControl = app.segmentedControls["tipPercentageSegmentedControl"] // set in ContentView in accessibilityIdentifier
+        let segmentedControlButton = tipPercentageSegmentedControl.buttons.element(boundBy: 1)
+        
+        XCTAssertEqual(segmentedControlButton.label, "20%")
+        XCTAssertTrue(segmentedControlButton.isSelected)
     }
 }
