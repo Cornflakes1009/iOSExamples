@@ -71,6 +71,19 @@ class when_calculate_tip_button_is_pressed_for_valid_input: XCTestCase {
         let _ = tipText.waitForExistence(timeout: 0.5)
         XCTAssertEqual(tipText.label, "$20.00")
     }
+    
+    // This test created using the Recording Tool
+    // press the record button (located near where you turn breakpoints on/off) in the bottom left of the code
+    func test_should_make_sure_that_tip_is_displayed_on_the_screen_2() {
+        let app = XCUIApplication()
+        app.activate()
+        app/*@START_MENU_TOKEN@*/.textFields["totalTextField"]/*[[".otherElements",".textFields[\"Enter total\"]",".textFields[\"totalTextField\"]",".textFields.firstMatch"],[[[-1,2],[-1,1],[-1,3],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app/*@START_MENU_TOKEN@*/.textFields["totalTextField"]/*[[".otherElements",".textFields[\"Enter total\"]",".textFields[\"totalTextField\"]",".textFields.firstMatch"],[[[-1,2],[-1,1],[-1,3],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.typeText("100")
+        app.buttons["30%"].tap()
+        app/*@START_MENU_TOKEN@*/.buttons["calculateTipButton"]/*[[".otherElements",".buttons[\"Calculate Tip\"]",".buttons[\"calculateTipButton\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+        let tipText = app.staticTexts["tipText"]
+        XCTAssertEqual("$30.00", tipText.label)
+    }
 }
 
 class when_calculate_tip_button_is_pressed_for_invalid_input: XCTestCase {
