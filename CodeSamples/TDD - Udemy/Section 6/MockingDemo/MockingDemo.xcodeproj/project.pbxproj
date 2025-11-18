@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,16 @@
 		8D5B9DE02714B07300D46CEA /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B9DDF2714B07300D46CEA /* DashboardView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D990CCFA2ECC5C8D009D8826 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D5B9DAD2714825E00D46CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D5B9DB42714825E00D46CEA;
+			remoteInfo = MockingDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		8D5B9DB52714825E00D46CEA /* MockingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MockingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B9DB82714825E00D46CEA /* MockingDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingDemoApp.swift; sourceTree = "<group>"; };
@@ -27,10 +37,22 @@
 		8D5B9DCB2714865B00D46CEA /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		8D5B9DCE271486C200D46CEA /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		8D5B9DDF2714B07300D46CEA /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		D990CCF42ECC5C8D009D8826 /* MockingDemoUserInterfaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockingDemoUserInterfaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D990CCF52ECC5C8D009D8826 /* MockingDemoUserInterfaceTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MockingDemoUserInterfaceTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8D5B9DB22714825E00D46CEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D990CCF12ECC5C8D009D8826 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				8D5B9DB72714825E00D46CEA /* MockingDemo */,
+				D990CCF52ECC5C8D009D8826 /* MockingDemoUserInterfaceTests */,
 				8D5B9DB62714825E00D46CEA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				8D5B9DB52714825E00D46CEA /* MockingDemo.app */,
+				D990CCF42ECC5C8D009D8826 /* MockingDemoUserInterfaceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +155,29 @@
 			productReference = 8D5B9DB52714825E00D46CEA /* MockingDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D990CCF32ECC5C8D009D8826 /* MockingDemoUserInterfaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D990CCFE2ECC5C8D009D8826 /* Build configuration list for PBXNativeTarget "MockingDemoUserInterfaceTests" */;
+			buildPhases = (
+				D990CCF02ECC5C8D009D8826 /* Sources */,
+				D990CCF12ECC5C8D009D8826 /* Frameworks */,
+				D990CCF22ECC5C8D009D8826 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D990CCFB2ECC5C8D009D8826 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D990CCF52ECC5C8D009D8826 /* MockingDemoUserInterfaceTests */,
+			);
+			name = MockingDemoUserInterfaceTests;
+			packageProductDependencies = (
+			);
+			productName = MockingDemoUserInterfaceTests;
+			productReference = D990CCF42ECC5C8D009D8826 /* MockingDemoUserInterfaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -138,11 +185,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					8D5B9DB42714825E00D46CEA = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					D990CCF32ECC5C8D009D8826 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 8D5B9DB42714825E00D46CEA;
 					};
 				};
 			};
@@ -160,6 +211,7 @@
 			projectRoot = "";
 			targets = (
 				8D5B9DB42714825E00D46CEA /* MockingDemo */,
+				D990CCF32ECC5C8D009D8826 /* MockingDemoUserInterfaceTests */,
 			);
 		};
 /* End PBXProject section */
@@ -171,6 +223,13 @@
 			files = (
 				8D5B9DC02714825F00D46CEA /* Preview Assets.xcassets in Resources */,
 				8D5B9DBD2714825F00D46CEA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D990CCF22ECC5C8D009D8826 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +249,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D990CCF02ECC5C8D009D8826 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D990CCFB2ECC5C8D009D8826 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D5B9DB42714825E00D46CEA /* MockingDemo */;
+			targetProxy = D990CCFA2ECC5C8D009D8826 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8D5B9DC12714825F00D46CEA /* Debug */ = {
@@ -369,6 +443,53 @@
 			};
 			name = Release;
 		};
+		D990CCFC2ECC5C8D009D8826 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 464PVQ34ND;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harolddavidson.MockingDemoUserInterfaceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MockingDemo;
+			};
+			name = Debug;
+		};
+		D990CCFD2ECC5C8D009D8826 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 464PVQ34ND;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harolddavidson.MockingDemoUserInterfaceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MockingDemo;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -386,6 +507,15 @@
 			buildConfigurations = (
 				8D5B9DC42714825F00D46CEA /* Debug */,
 				8D5B9DC52714825F00D46CEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D990CCFE2ECC5C8D009D8826 /* Build configuration list for PBXNativeTarget "MockingDemoUserInterfaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D990CCFC2ECC5C8D009D8826 /* Debug */,
+				D990CCFD2ECC5C8D009D8826 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
