@@ -9,10 +9,15 @@ import XCTest
 
 final class when_user_taps_on_login_button: XCTestCase {
     
-    func test_text_should_display_error_message_for_missing_required_fields() {
-        let app = XCUIApplication()
+    private var app: XCUIApplication!
+    
+    override func setUp() {
+        app = XCUIApplication()
         continueAfterFailure = false
         app.launch()
+    }
+    
+    func test_text_should_display_error_message_for_missing_required_fields() {
         
         let usernameTextField = app.textFields["usernameTextField"]
         usernameTextField.tap()
@@ -29,4 +34,20 @@ final class when_user_taps_on_login_button: XCTestCase {
         XCTAssertEqual(messageText.label, "Required fields are missing")
     }
     
+    func test_should_navigate_to_dashboard_screen_when_authenticated() {
+        let usernameTextField = app.textFields["usernameTextField"]
+        usernameTextField.tap()
+        usernameTextField.typeText("JohnDoe")
+        
+        let passwordTextField = app.textFields["passwordTextField"]
+        passwordTextField.tap()
+        //passwordTextField.typeText("WrongPassword")
+        passwordTextField.typeText("Password")
+        
+        let loginButton = app.buttons["loginButton"]
+        loginButton.tap()
+        
+        let dashboardNavTitle = app.staticTexts["Dashboard"]
+        XCTAssertTrue(dashboardNavTitle.waitForExistence(timeout: 0.5))
+    }
 }
