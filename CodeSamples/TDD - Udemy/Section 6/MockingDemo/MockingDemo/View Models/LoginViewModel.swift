@@ -20,9 +20,9 @@ class LoginViewModel: ObservableObject {
     @Published var password: String = ""
     @Published var loginStatus: LoginStatus = .none
     
-    private var service: Webservice
+    private var service: NetworkService // using a custom protcol
     
-    init(service: Webservice) {
+    init(service: NetworkService) {
         self.service = service
     }
     

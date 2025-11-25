@@ -13,7 +13,12 @@ enum NetworkError: Error {
     case notAuthenticated
 }
 
-class Webservice {
+// A protocol being used for mocking
+protocol NetworkService {
+    func login(username: String, password: String, completion: @escaping (Result<Void, NetworkError>) -> Void)
+}
+
+class Webservice: NetworkService {
     
     func login(username: String, password: String, completion: @escaping (Result<Void, NetworkError>) -> Void) {
         

@@ -40,8 +40,18 @@
 		D990CCF42ECC5C8D009D8826 /* MockingDemoUserInterfaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockingDemoUserInterfaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D990CD892ED5917D009D8826 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Mocks/MockWebService.swift,
+			);
+			target = 8D5B9DB42714825E00D46CEA /* MockingDemo */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		D990CCF52ECC5C8D009D8826 /* MockingDemoUserInterfaceTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MockingDemoUserInterfaceTests; sourceTree = "<group>"; };
+		D990CCF52ECC5C8D009D8826 /* MockingDemoUserInterfaceTests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D990CD892ED5917D009D8826 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = MockingDemoUserInterfaceTests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */

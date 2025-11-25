@@ -41,7 +41,6 @@ final class when_user_taps_on_login_button: XCTestCase {
         
         let passwordTextField = app.textFields["passwordTextField"]
         passwordTextField.tap()
-        //passwordTextField.typeText("WrongPassword")
         passwordTextField.typeText("Password")
         
         let loginButton = app.buttons["loginButton"]
