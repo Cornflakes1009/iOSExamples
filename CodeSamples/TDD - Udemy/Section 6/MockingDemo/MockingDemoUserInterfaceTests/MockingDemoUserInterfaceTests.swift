@@ -35,6 +35,22 @@ final class when_user_taps_on_login_button: XCTestCase {
         XCTAssertEqual(messageText.label, "Required fields are missing")
     }
     
+    func test_should_display_error_message_for_invalid_credentials() {
+        let usernameTextField = app.textFields["usernameTextField"]
+        usernameTextField.tap()
+        usernameTextField.typeText("JohnDoe")
+        
+        let passwordTextField = app.textFields["passwordTextField"]
+        passwordTextField.tap()
+        passwordTextField.typeText("WrongPassword")
+        
+        let loginButton = app.buttons["loginButton"]
+        loginButton.tap()
+        
+        let messageText = app.staticTexts["messageText"]
+        XCTAssertEqual(messageText.label, "Invalid credentials")
+    }
+    
     func test_should_navigate_to_dashboard_screen_when_authenticated() {
         let usernameTextField = app.textFields["usernameTextField"]
         usernameTextField.tap()
