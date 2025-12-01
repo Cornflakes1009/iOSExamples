@@ -17,6 +17,7 @@
 		8DB62F6E271C7B020034115F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB62F6D271C7B020034115F /* CoreDataManager.swift */; };
 		8DB62F71271C8BED0034115F /* Task+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB62F70271C8BED0034115F /* Task+Extensions.swift */; };
 		8DB62FA4271DE88C0034115F /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB62FA3271DE88C0034115F /* TaskDetailView.swift */; };
+		D990CDFE2EDD7B70009D8826 /* Springboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D990CDFD2EDD7B70009D8826 /* Springboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		8DB62F6D271C7B020034115F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8DB62F70271C8BED0034115F /* Task+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Extensions.swift"; sourceTree = "<group>"; };
 		8DB62FA3271DE88C0034115F /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
+		D990CDFD2EDD7B70009D8826 /* Springboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Springboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		8D51BE6B271F4A7100E6543E /* TodoAppEndToEndTests */ = {
 			isa = PBXGroup;
 			children = (
+				D990CDFC2EDD7B60009D8826 /* Utils */,
 				8D51BE6C271F4A7100E6543E /* TodoAppEndToEndTests.swift */,
 				8D51BE6E271F4A7100E6543E /* TodoAppEndToEndTestsLaunchTests.swift */,
 			);
@@ -126,6 +129,14 @@
 				8DB62F70271C8BED0034115F /* Task+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D990CDFC2EDD7B60009D8826 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D990CDFD2EDD7B70009D8826 /* Springboard.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +241,7 @@
 			files = (
 				8D51BE6D271F4A7100E6543E /* TodoAppEndToEndTests.swift in Sources */,
 				8D51BE6F271F4A7100E6543E /* TodoAppEndToEndTestsLaunchTests.swift in Sources */,
+				D990CDFE2EDD7B70009D8826 /* Springboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
