@@ -85,24 +85,15 @@ struct ContentView: View {
                         HStack {
                             Text(task.title ?? "")
                             Spacer()
-                            
                             if task.isFavorite {
-                                Image(systemName: "heart.fill")
-                                    .foregroundColor(.red)
+                                Image(systemName: "heart.fill").foregroundColor(.red)
                             }
-
-                            Text(task.priority ?? "")
-                                .frame(maxWidth: 100)
+                            Text(task.priority ?? "").frame(maxWidth: 100)
                         }
                         .contentShape(Rectangle())
-                        .onTapGesture {
-                            self.selectedTask = task
-                        }
-                        .sheet(item: $selectedTask) {
-                            
-                        } content: { task in
-                            TaskDetailView(task: task)
-                        }
+                        // Make the whole row an accessibility element and give it an identifier
+                        .accessibilityElement(children: .contain)
+                        .accessibilityIdentifier("taskCell_\(task.title ?? UUID().uuidString)")
                     }
                     .onDelete { indexSet in
                         indexSet.forEach { index in
