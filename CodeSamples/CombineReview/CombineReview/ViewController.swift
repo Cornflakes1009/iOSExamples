@@ -9,6 +9,7 @@ import UIKit
 import Combine
 
 class MyTableViewCell: UITableViewCell {
+    
     private let button: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .systemPink
@@ -17,9 +18,12 @@ class MyTableViewCell: UITableViewCell {
         return button
     }()
     
+    let action = PassthroughSubject<String, Never>() // the Never here indicates that it can never return an error
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(button)
+        button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
     }
     
     required init(coder: NSCoder) {
@@ -30,12 +34,16 @@ class MyTableViewCell: UITableViewCell {
         super.layoutSubviews()
         button.frame = CGRect(x: 10, y: 3, width: contentView.frame.size.width - 20, height: contentView.frame.height - 6)
     }
+    
+    @objc func didTapButton() {
+        action.send("Button tapped")
+    }
 }
 
 class ViewController: UIViewController {
     
     private var models = [String]()
-    var observer: AnyCancellable?
+    var observers: [AnyCancellable] = []
     
     private let tableView: UITableView = {
         let table = UITableView()
@@ -49,7 +57,7 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.frame = view.bounds
         
-        observer = APICaller.shared.fetchCompanies()
+        APICaller.shared.fetchCompanies()
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
             switch completion {
@@ -61,7 +69,7 @@ class ViewController: UIViewController {
         }, receiveValue: { [weak self] value in
             self?.models = value
             self?.tableView.reloadData()
-        })
+        }).store(in: &observers)
     }
 
 
@@ -77,6 +85,9 @@ extension ViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.textLabel?.text = models[indexPath.row]
+        cell.action.sink { str in
+            print(str)
+        }.store(in: &observers)
         return cell
     }
 }
